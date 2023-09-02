@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "명조체";
+        }
+
+        header {
+            background-color: gray;
+        }
+
+        div#top_menu ul li {
+            display: inline;
+            padding: 3px;
+        }
+
+        div#top_menu {
+            text-align: right;
+            padding-right: 15px;
+            padding-top: 5px;
+        }
+
+        nav#menu ul li {
+            text-decoration: none;
+        }
+
+        div#topTitle {
+            text-align: center;
+            height: 100px;
+        }
+
+        nav#categoryMenu {
+            float : left;
+            width: 20%;
+            height: 300px;
+            background-color: lavender;
+        }
+
+        article {
+            width: 80%;
+            float: left;
+            height: 300px;
+            background-color: wheat;
+        }
+
+        nav#categoryMenu ul {
+            list-style: none;
+        }
+
+        footer {
+            background-color: gray;
+            text-align: center;
+            padding: 5px;
+        }
+
+        section::after { /*section 태그 이후 처리 제어 */
+            content: "";
+            display: table;
+            clear: both;;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="top_menu">
+            <nav id="menu">
+                <ul>
+                    <li><a href = "#">Login</a></li>
+                    <li><a href = "#">Join</a></li>
+                    <li><a href = "#">MyPage</a></li>
+                    <li><a href = "#">Cart</a></li>
+                </ul>
+            </nav>
+            <div id="topTitle">
+            <h1>WPMall</h1>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <nav id="categoryMenu">
+            <ul>
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">BOTTOM</a></li>
+                <li><a href="#">OUTER</a></li>
+                <li><a href="#">DENIM</a></li>
+                <li><a href="#">ACC</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>TOP</h1>
+            <div>
+                <div>
+                    aaaaa?
+                </div>
+            </div>
+        </article>
+        </section>
+        <footer>
+        <div>
+            <p>(주)WPMall | 대표 : 박현준 | 사업자 등록번호 : 123-44-1255 | 통신판매업신고 : 제0000-서울노원-100호 | 개인정보 보호 책임자 : 박현준</p>
+            <p>E-mail : user01@gmail.com | 주소 : 서울시 노원구 이젠빌딩 704호</p>
+            <p>ⓒ2023. DocMall All rights reserved.</p>
+        </div>
+        </footer>
+
+
+</body>
+</html>

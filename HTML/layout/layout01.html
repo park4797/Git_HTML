@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 구현 능력단위평가</title>
+    <style>
+        *{
+            box-sizing: border-box; /*모든 창의 크기가 동일해진다*/
+        }
+        
+        body {
+            font-family: "명조체";
+        }
+
+        header {
+            background-color: green;
+            padding-top: 0px;
+            padding-right: 10px;
+        }
+
+        div#top_title h1{
+            text-align: center;
+        }
+
+        div#top_title {
+            height: 100px;
+        }
+
+        div#top_menu {
+            text-align: right;
+
+        }
+
+        nav#menu ul {
+            list-style-type: none;
+            padding-top: 15px;
+        }
+
+        nav#menu ul li {
+            display: inline;
+        }
+
+        nav#menu ul li a::after {
+            content: " | ";
+        }
+
+        section::after { /*section 태그 이후 처리 제어 */
+            content: "";
+            display: table;
+            clear: both;;
+        }
+
+        nav#category_Menu { /*왼쪽 메뉴를 설정*/
+            float : left;
+            width: 20%;
+            height: 500px;
+            padding-left: 50px;
+            padding-top: 40px;
+            font-size: 20px;
+            background-color: gray;
+        }
+
+        nav#category_Menu ul {
+            list-style-type: none;
+            padding: 5px;
+        }
+
+        a {
+            color: black;
+        }
+        a:link {
+            text-decoration : none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            text-decoration: underline;
+        }
+
+        article {
+            float: left;
+            width: 80%;
+            padding: 20px;
+            background-color: white;
+            height: 500px;
+        }
+
+        footer {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+            }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+            }
+
+            div.gallery img {
+            width: 100%;
+            height: auto;
+            }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            }
+
+            /*브라우저 창 크기 확인*/
+            @media (max-width: 600px) { 
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+    </style>
+</head>
+<body>
+    <header>
+    <div>
+        <div id="top_menu">
+            <nav id="menu">
+            <ul>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">MYPAGE</a></li>
+                <li><a href="#">ORDER</a></li>
+                <li><a href="#">CART(0)</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div id="top_title">
+            <h1>WPMall</h1>
+        </div>
+    </div>
+    </header>
+
+    <section><!--페이지 내 파트에 해당(파트를 나눈다.)-->
+        <nav id="category_Menu"><!--다른 페이지 또는 현재 페이지의 다른 부분과 연결되는 navigation links들의 집합을 정의할 때 사용(쇼핑몰 홈페이지 생각)-->
+            <ul> <!--카테고리의 시작-->
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">SHIRT</a></li>
+                <li><a href="#">PANTS</a></li>
+                <li><a href="#">OUTER</a></li>
+            </ul>
+        </nav>
+
+        <article> <!--상품 리스트 작업-->
+            <h1>TOP</h1>
+            <div>
+                <div class="gallery">
+                    <a target="_blank" href="img_5terre.jpg">
+                    <img src="/HTML/image/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+                
+                <div class="gallery">
+                    <a target="_blank" href="img_forest.jpg">
+                    <img src="/HTML/image/img_forest.jpg" alt="Forest" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+                
+                <div class="gallery">
+                <a target="_blank" href="img_lights.jpg">
+                <img src="/HTML/image/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+                </div>
+                
+                <div class="gallery">
+                    <a target="_blank" href="img_mountains.jpg">
+                    <img src="/HTML/image/img_mountains.jpg" alt="Mountains" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div>
+                <p>(주)DDAKMall | 대표 : 박현준 | 사업자 등록번호 : 123-44-1255 | 통신판매업신고 : 제0000-서울노원-100호 | 개인정보 보호 책임자 : 박현준</p>
+                <p>E-mail : park47971@gmail.com | 주소 : 서울시 노원구 이젠빌딩 704호</p>
+                <p>ⓒ2023. DocMall All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

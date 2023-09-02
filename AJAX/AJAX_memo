@@ -1,0 +1,32 @@
+JSON.parse(매개변수)
+- 매개변수
+1) JSON 문자열 > JavaScript object 변환
+2) Array 문자열 > Array 변환
+
+Ajax
+- XMLHttpRequest 객체 : 브라우저 탑재
+- fetch() method 사용
+
+HTTP 상태코드
+200 -> 서버에서 성공적으로 작업이 이루어짐
+서버에서 클라이언트에게 이 코드를 보낸다.
+
+.then(function(res) {
+  return res.json();
+})
+
+화살표 함수
+.then((res) => {return res.json()}); // 중괄호는 한 줄이 아닌 여러줄일때 사용하고, return이 들어간다.
+.then(res => res.json());
+
+클라이언트와 서버가 통신(데이터를 주고 받는 행위)
+
+데이터의 구조
+- header : 데이터의 설명에 해당하는 부가정보를 관리하는 개념
+- body(본문) : 데이터 자체를 저장하는 개념
+
+데이터 전송방식
+- get : 데이터 조회
+- post : 데이터 등록
+- put(patch) : 데이터 수정
+- delete : 데이터 삭제

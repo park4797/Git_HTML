@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>AJAX 기술을 이해하자</h1>
+
+    <div id="demo">
+        <h2>XMLHttpRequest 객체</h2>
+        <button type="button" onclick="loadDoc()">내용 변경하기</button>
+    </div>
+
+    <script>
+        /*
+        AJAX : Async(비동기화), JavaScript, XML
+        오늘날에는 XML - > JSON
+        핵심객체 : XMLHttpRequest 객체
+        개요 : Webpage 부분 update 기술
+
+        작업 :  1) 웹서버로부터 데이터 읽어오기 - 페이지가 로드된 이후
+                2) 새페이지를 다시 로드하지 않고, 웹페이지의 일부분을 업데이트한다.
+                3) 백그라운드로 웹서버에 데이터를 보낼 수 있다.
+                새로고침 현상이 발생되지 않는다.
+        */
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest(); // 객체생성
+            xhttp.onload = function (){
+                document.getElementById("demo").innerHTML = this.responseText; // this 는 xhttp
+            }
+            xhttp.open("GET", "./ajax_info.txt"); // 설정단계
+            // GET 방식으로 주소를 요청
+            xhttp.send(); // 작업요청
+        }
+    </script>
+</body>
+</html>

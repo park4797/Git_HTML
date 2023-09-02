@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON 문자열 데이터를 서버로 전송하는 작업 : POST 방식</h1>
+    <p>post방식 : 데이터를 서버에 저장(삽입, 등록)할 때 사용</p>
+
+    <!--<form>-->
+        title : <input type="text" id="title"><br>
+        body : <textarea id="body"></textarea><br>
+        userId : <input type="text" id="userId"><br>
+
+    <!--</form>-->
+    <button type="button" onclick="post()">json 데이터 서버전송</button>
+
+    <script> // 정보를 get 방식 혹은 post 방식으로 보낼지 정하는 방법론
+        function post() {
+            // 요청주소
+            let url = "https://jsonplaceholder.typicode.com/posts";
+
+            // 입력데이터, 아래 코드의 데이터에 삽입된다
+            let title = document.getElementById("title").value;
+            let body = document.getElementById("body").value;
+            let userId = document.getElementById("userId").value;
+
+            fetch(url, { // window.fetch()
+                method : "POST", // 데이터 삽입(추가), 서버로 전송한다.
+                headers : { 
+                    "Content-Type" : "application/json" // 데이터에 대한 설명
+                }, // 데이터를 보낼때 headers와 body루트로 나뉜다(AJAX_memo 참고)
+                // body : JSON.stringify ({title : 'Test', body : "Testing...", userId : 1}) // 데이터
+                body : JSON.stringify ({title : title, body : body, userId : userId}) // 데이터
+
+            })
+            .then((response) => {return response.json()})// return 타입이 promise 이므로 추가 작업이 필요하다.
+                // console.log(response); // return 타입이 void 이므로 추가 작업 x
+                // json 문자열 데이터를 promise 객체에서 관리되는 object 객체형태로 사용 가능하게 해줌
+            .then((data) => {
+                console.log(data)
+                alert(data.title + "데이터가 등록되었습니다.");
+            });
+        }// 중괄호를 사용할때는 작업할 줄이 여러개 일때 사용. 따라서 중괄호가 있을시 return을 적어야함
+    </script>
+</body>
+</html>

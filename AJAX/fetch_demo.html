@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fetch() method를 이용한 ajax 작업 - get 방식</h1>
+
+    <p id="demo">버튼을 클릭하면, 서버로부터 데이터를 갱신하게 됩니다.</p>
+
+    <button type="button" onclick = "fetchload()">클릭</button>
+
+    <script>
+        function fetchload() {
+            // JSON 데이터를 보내는 기능
+            let url = "https://jsonplaceholder.typicode.com/posts/1";
+            fetch(url) // promise 객체를 리턴
+            .ten((response) => response.json())
+            /* 화살표 함수
+            .then((response) => 
+            {
+                return response.json()
+            })
+            */
+            // 서버로부터 json 데이터를 받아오면 구문이 진행됨.
+            // response.json이 아랫줄의 .then으로 전달됨
+            .then((data) => { // 명령어를 여러개 사용하고 싶으면 중괄호로 묶는다.
+                display(data); // 화살표 함수는 한 줄만 명령어를 적게 되면 그 자체가 return 값이됨
+                // 23 line - display(data); 는 object 개체.
+        });
+
+        }
+
+        function display(data) {
+
+            console.log(data);
+
+            // 아래 작업이 필요가 없다.
+            // let obj = JSON.parse(data); // javascript object
+
+            document.getElementById("demo").innerHTML =
+                `userid : ${data.userId}<br>${data.id}<br>title : ${data.title}<br>body : ${data.body}`;
+        }
+    </script>
+</body>
+</html>

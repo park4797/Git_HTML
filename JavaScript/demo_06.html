@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript </title>
+    <script>
+        //자바스크립트 구문이 함수(function)로 작성되어 있으면, <head>, <body>태그의 어떤 위치도 상관이 없다.
+        //함수정의
+        function myFunction() {
+            document.getElementById('demo').innerHTML='Hello Javascript!!!';
+        }
+    </script>
+</head>
+<body>
+    <h2>자바스크립트로 무엇을 할 수 있을까?</h2>
+    <p id="demo">자바스크립트로 태그의 내용을 변경할 수 있다.</p>
+    <button onclick="myFunction()">클릭!</button>
+</body>
+</html>

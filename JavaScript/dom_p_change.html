@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>p tag에 날짜, 시간 출력하기</h1>
+
+    <p id="demo1"></p>
+
+    <script>
+        function displayDate() {
+            document.getElementById("demo1").innerHTML =
+            `오늘의 날짜는? ${Date()}`
+        }
+    </script>
+
+    <button onclick="displayDate()">날짜</button>
+</body>
+</html>

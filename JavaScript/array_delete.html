@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열요소안의 데이터 삭제하기</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const 과일 = ["배", "사과", "포도", "수박"];
+        document.getElementById('demo1').innerHTML = 과일;
+        delete 과일[0]; // shift(), pop() : 첫 번째 요소 제거(기억장소포함)
+        //첫 번째 요소의 기억장소는 유지되고, 데이터만 삭제. undefined
+        document.getElementById('demo2').innerHTML = 과일;
+    </script>
+</body>
+</html>

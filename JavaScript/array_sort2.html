@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열 정렬 : 숫자데이터</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        //points.sort() : 텍스트(문자) 정렬로 처리됨.(코드순)
+        const points = [40, 100, 1, 5, 25, 10];
+        
+        document.getElementById("demo1").innerHTML = points;
+        
+        points.sort(function(a, b) {return a - b}); // 대소 비교작업, 오름차순
+        // points.sort(function(a, b) {return b - a}); // 내림차순
+        document.getElementById("demo2").innerHTML = points;
+        // 숫자로 표현했지만 문자관점으로 처리해놓음
+    </script>
+</body>
+</html>

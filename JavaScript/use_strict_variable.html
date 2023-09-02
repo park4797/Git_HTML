@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--자바스크립트의 모드는 엄격모드(use strict)와 비엄격모드(non-use strict)로 나뉜다.-->
+    <h1>use strict : 엄격 모드, 변수</h1> 
+    
+    <p id="demo">use strict는 문법을 fm으로 쳐야만 작동하게 만들어준다.</p>
+
+    <script>
+        "use strict"; // 항상 맨 첫줄에 써줘야 한다. 주석을 교차로 하여 테스트 한다.
+        x = 3.14 ; // 변수를 선언하지 않고 사용하여, error 처리가 된다.
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

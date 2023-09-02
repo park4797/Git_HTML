@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String back-ticks</title>
+</head>
+<body>
+    <h1>backtick `` 사용</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        /*
+        back-ticks(``) 기호안에 작은 따옴표, 큰 따옴표, 변수 및 연산 가능
+        */
+        let text = `He's "Johnny"`;
+        document.getElementById("demo1").innerHTML = text;
+
+        let firstName = "John";
+        let lastName = "Doe";
+
+        //text = "Welcome" + firstName + ", " + lastName + "!";
+        text = `Welcome ${firstName} , ${lastName}!`;
+        document.getElementById('demo2').innerHTML = text;
+
+        let price = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price * (1+VAT)).toFixed(3)}`;
+        // back-ticks 안에서는 연산이 가능하다.
+        // toFixed는 소수점을 지정한 자릿수까지 표현해준다.
+        document.getElementById('demo3').innerHTML = total;
+    </script>
+</body>
+</html>

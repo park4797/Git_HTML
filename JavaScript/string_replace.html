@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String's replace</title>
+</head>
+<body>
+    <h1>replace() methods 사용</h1>
+    <p id="demo1">Please visit Microsoft</p>
+    <button onclick="replace()";>Click!</button>
+    <script>
+        function replace() {
+        let text = document.getElementById('demo1').innerHTML; //text에 p태그 내용을 담음
+        // 대소문자 구분 정확하게
+        document.getElementById('demo1').innerHTML =
+        text.replace('Microsoft', 'W3Schools');
+        }
+    </script>
+</body>
+</html>

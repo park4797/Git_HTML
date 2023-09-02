@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열 정렬(sort)</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const fruits = ["banana", "Orange", "Apple", "Mango"];
+        // 대소문자끼리도 차이가 있기 떄문에 결과가 달라진다(대소문자 차이는 32)
+        // B : 98, O : 111, A : 97, M : 115??
+        // B : \u0042, O : \u004f, A : \u0041, M : \u004d??
+        document.getElementById("demo1").innerHTML = "기본 : " + fruits;
+
+        fruits.sort(); // 유니코드값(0~65535)을 기준으로 오름차순 정렬
+        // 내림차순 명령어는 지원하지 않는다.
+        document.getElementById("demo2").innerHTML = "오름차순 : " + fruits;
+
+        fruits.reverse(); // 역순, 결과가 내림차순의 효과를 낸다.
+        document.getElementById("demo3").innerHTML = "리버스 : " + fruits;
+
+    </script>
+
+    <!-- sort는 포함된 문자를 정렬해주는 methods이다.-->
+</body>
+</html>

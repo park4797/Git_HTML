@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>조건식 값이 존재시 true로 해석</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        //boolean_value.html 예제 참고.
+
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+        let i = 0;
+        let text = "";
+        /*
+        (1;2;3) 2번은 true, false를 설정할 수 있는 곳이나
+        조건식이 값이 존재하면 true로 해석된다.
+        문법에서 조건식에 값을 사용하면, boolean 값으로 해석
+        */
+        for (;cars[i];) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charat</title>
+</head>
+<body>
+    <h1>charCodeAt</h1>
+    <p id="demo"></p>
+    <script>
+        let text = "Hello Wolrd!";
+        document.getElementById('demo').innerHTML = text.charCodeAt(1);
+        document.getElementById('demo').innerHTML = text.charAt(1);
+        document.getElementById('demo').innerHTML = text[0];
+        //charAt 지정된 인덱스에 있는 문자를 반환(출력), [~];와 같다.
+        //charCodeAt지정된 인덱스에 있는 문자의 유니코드를 보고 싶은 곳을 선택해 출력
+    </script>
+
+    <script>
+    /*
+    <h1>String 접근</h1>
+    <p id="demo1"></p>
+    <script>
+        let text = "HELLO WOLRD!"
+
+        //접근해서 문자를 읽어 올 수 있지만 변경은 불가능
+        document.getElementById("demo1").innerHTML = text[0]; // H
+
+        text[0] = 'A'; // AELLO WORLD 에러발생
+        */
+    </script>
+</body>
+</html>

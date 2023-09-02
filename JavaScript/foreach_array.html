@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>foreach ~ array</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [45, 4, 9 ,16, 25];
+
+        let txt = ""; // string 데이터타입
+
+        numbers.forEach(myFunction);
+        
+        document.getElementById("demo").innerHTML = txt;
+
+        function myFunction(value, index, array) {
+            txt += value + "<br>";
+        }
+
+        
+        // () 괄호 안에 parameter(매개변수)가 callbackfn으로 나올시 함수를 제공해야함
+        /*
+        callbackfn 함수는 forEach() methods의 parameter 특징에 맞게
+        함수를 정의해야 한다. (:void <- return 사용 불가)
+        */
+        // 이 함수는 forEach를 이용하겠다는 목적을 지니고 있어야함
+    </script>
+</body>
+</html>

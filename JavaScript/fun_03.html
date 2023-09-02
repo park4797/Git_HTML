@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuction 3</title>
+</head>
+<body>
+    <h1>함수 선언하기 : 두 수 곱하기</h1>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <script>
+        let x, y, z;
+        x = 10;
+        y = 20;
+        z = x * y;
+        document.getElementById('result1').innerHTML = z;
+        
+        function mul(a,b) {
+            return a * b;
+        }
+        document.getElementById('result2').innerHTML = mul(3, 5)
+    document.getElementById('result3').innerHTML = mul(1000000, 203040);
+        
+        
+        function 곱하기(띵킹,생각) {
+            return 띵킹 * 생각;
+        }
+        document.getElementById('result4').innerHTML = 곱하기(400, 500);
+    // document 문서안의 getElementById 이곳을 참조하겠다 innerHTML 값 표출
+</script>
+    
+</body>
+</html>

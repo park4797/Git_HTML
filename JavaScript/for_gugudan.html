@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>구구단 예제</h1>
+
+    <script>
+        document.write("<table border='1'>")
+        for (let gop = 0; gop <=9; gop++) {
+            document.write("<tr>");
+
+            for (let dan = 2; dan <=9; dan++) {
+                if (gop == 0) {
+                    document.write(`<th> ${dan}단</th>`);
+                }else {
+                    document.write(`<td>${dan} x ${gop} = ${dan * gop}</td>`); //데이터행
+                }
+                
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+        // j- 2 x 1 - i
+    </script>
+    
+</body>
+</html>

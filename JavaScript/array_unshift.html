@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>push의 반대 unshift</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const 과일 = ["딸기", "배", "체리", "앵두"];
+        document.getElementById('demo1').innerHTML = 과일;
+        과일.unshift("레몬"); // push의 반대로 맨 앞에 삽입시켜준다.
+        document.getElementById('demo2').innerHTML = 과일;
+        document.getElementById('demo3').innerHTML = 과일.length;
+    </script>
+</body>
+</html>

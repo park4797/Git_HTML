@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dom event listener</h1>
+    <button type="button" id="myBtn1">클릭1</button>
+    <button type="button" id="myBtn2">클릭2</button>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        // 속성을 이용한 방식
+        document.getElementById("myBtn1").onclick = displayDate;
+
+        // method 형태
+        // event를 여러개 추가 및 제거가 가능하다.
+        document.getElementById("myBtn2").addEventListener("click", displayDate);
+        // document.getElementById("myBtn").addEventListener("mouseover", displayMessage);
+
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        function displayMessage() {
+            alert("이벤트");
+        }
+    </script>
+</body>
+</html>

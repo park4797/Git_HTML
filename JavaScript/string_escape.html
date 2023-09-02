@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String's escape</title>
+</head>
+<body>
+    <h1>Escape Sequence(character)</h1>
+    <p id="demo1"></p>
+    <script>
+        /*
+        백슬래시(\) 뒤에 문자나 숫자조합이 오는 문자조합을 Escape Sequence 라고 한다.
+        줄 바꿈문자, 작은 따옴표, 역슬래시 문자 등을 표현하기 위한 약속된 규칙
+
+        예) let text = "We are the so-called "Viking" from the north."; <- 틀린 예시
+        let text = 'We are the so-called "Viking" from the north.';   */
+        let text = "\"We are the so-called \"Viking\" from the north.\"";
+        document.getElementById('demo1').innerHTML = text;
+
+        alert("자바\t스프링\t오라클\n현재는 자바스크립트");
+    </script>
+</body>
+</html>

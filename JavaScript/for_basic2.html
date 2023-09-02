@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1부터 100까지 합을 출력</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        let sum = 0;
+        for (let i = 1; i <= 100; i++){
+            sum += i;
+        }
+
+        document.getElementById("demo").innerHTML = `1에서 10까지 합은? ${sum}`;
+    </script>
+</body>
+</html>

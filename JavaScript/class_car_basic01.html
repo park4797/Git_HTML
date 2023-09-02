@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>class 선언 및 사용</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // class 선언(정의)
+        // 기억장소를 설계한다는 개념(디자인)
+        // 기존에 존재하던 것들이 아닌(object, array 등) 수작업으로 만드는 느낌?
+        class Car { // Car의 명칭과 출시연도 정보를 저장하기 위해 만들어짐
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+            // method 추가
+            // 속성안의 데이터를 가지고 차의 연식을 구한다.
+            age(x) {
+                return x - this.year;
+            }
+        }
+
+        // 클래스 사용 = let, var, const 사용하는 의미와 같다.
+        const date = new Date();
+        let year = date.getFullYear(); // 현재 연도
+
+        const myCar1 = new Car("Ford", 2014);
+
+        document.getElementById("demo").innerHTML =
+
+        `자동차1 이름은? ${myCar1.name} 이고, 연식은 ${myCar1.age()}`
+
+        console.log(myCar1.age());
+
+        /*
+        class 클래스명{
+            construtor (매개변수1, 2) {
+                this.매개변수1 = 매개변수1;
+                this.필드(속성) = 매개변수2;
+            }
+            method() {
+
+            }
+        }
+        
+        - 사용
+
+        const 이름 = new 클래스명();
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM childNodes 속성</h1>
+    <h1 id="demo1">DOM Node 제어</h1>
+    <p id="demo2"></p>
+
+    <script>
+    /*
+    document.getElementById("demo2").innerHTML =
+    document.getElementById("demo1").innerHTML;
+    //아래의 방식과 결과는 동일
+    // DOM Node 에서는 태그와 내용이 부모 자식관계로 구성되어 있다.
+    document.getElementById("demo2").innerHTML =
+    document.getElementById("demo1").firstChild.nodeValue;
+    */
+    document.getElementById("demo2").innerHTML =
+    document.getElementById("demo1").childNodes[0].nodeValue;
+    </script>
+</body>
+</html>

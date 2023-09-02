@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>주민번호 만들기</h1>
+
+    <p id="demo"> </p>
+
+    <script>
+        let ssn = "123456-2234567";
+        let sex = "";
+
+        if (ssn.charAt(7) == "1") {
+            sex = "남자";
+        }else if (ssn.charAt(7) == "2") {
+            sex = "여자";
+        }
+
+        document.getElementById("demo").innerHTML = "당신은 " + sex + " 입니다."
+    </script>
+</body>
+</html>

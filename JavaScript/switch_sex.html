@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>주민번호로 성별 확인하기</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const ssn = "123456-2234567";
+        let number = parseInt(ssn.charAt(7)); // 7번째 자리의 문자를 파악하는 코드
+        let sex = "";
+        console.log("number", number);
+        console.log("type", typeof number); //number 변수의 데이터타입 확인
+        
+        switch (number) {
+            case 1 :
+            case 3 :
+            case 5 :
+                sex = "남자";
+                break;
+            case 2 :
+            case 4 :
+            case 6 :
+                sex = "여자";
+                break;
+        }
+        
+        document.getElementById("demo").innerHTML = `당신의 성별은 ${sex} 입니다.`;
+    </script>
+</body>
+</html>

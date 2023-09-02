@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback 함수 연습</h1>
+
+    <script>
+        // 1)
+        function sayHello(name, callback) { // 함수명과(항목, callback 값?)
+            const word = `안녕하세요 내 이름은 ${name} 입니다.`; // 원하는 변수 설정
+
+            callback(word); // 매개변수의 함수(콜백 함수) 호출
+        }
+
+        // 함수 외부
+        sayHello("머리", function printing(name){ // 함수명이 있는 함수
+            console.log(name); // 안녕하세요 내 이름은 머리 입니다.
+        });
+
+        // 2)
+        function introduce(name, callback){
+            let ppt = `안녕하세요 제 이름은 ` + name + `입니다.`
+            callback(ppt);
+        }
+
+        // 함수 외부
+        introduce("코딩", function pr(name){
+            console.log(name);
+        });
+
+        // 3)
+        function product(apple, lemon, callback){
+            let price = `${apple}와 ${lemon}은 5000원 입니다.`;
+            callback(price);
+        }
+
+        product("사과", "레몬", function(lemon){ // 익명함수
+            console.log(lemon)
+        });
+    </script>
+</body>
+</html>

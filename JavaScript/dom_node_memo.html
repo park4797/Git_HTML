@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>예시</h1>
+    <p id="demo1"><b>자바는</b>객체지향언어<span>이다.</span></p>
+    <p id="demo2"></p>
+
+    <!--childNodes에서 '자바는'은 첫번째 자식, 뒤의 내용은 두 번째 자식
+    childNodes[0] : <b>자바는</b>
+    childNodes[1] : 객체지향언어이다.
+    nodeValue는 string을 읽어온다, 따라서 앞이 string이 아닐 경우, undifiend가 나온다.-->
+
+    <script>
+        document.getElementById("demo2").innerHTML =
+        document.getElementById("demo1").childNodes[1].firstChild.nodeValue;
+    </script>
+</body>
+</html>

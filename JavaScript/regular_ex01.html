@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>정규표현식 : [] 사용법</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // [문자] : 대괄호안의 문자를 1개단위로 검색(일치)하는 것을 찾게된다.
+        let text = "Is this all there is?";
+        // let result = text.match(/[h]/); // h 라는 문자를 하나 찾겠다.
+        // let result = text.match(/[h]/g); // h 라는 문자 모두를 찾겠다.
+        // result[0], result[1] 배열로 나열해준다.
+        let result = text.match(/[a-h]/g); //[abc~h]g. a~h범위의 문자
+        document.getElementById("demo").innerHTML = result;
+    </script>
+</body>
+</html>

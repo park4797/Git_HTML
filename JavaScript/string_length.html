@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String's length</title>
+    <script>
+        function fn_length() {
+            let userid = document.getElementById('userid'); // input ype="text" id="userid";
+            document.getElementById('length2').innerHTML = userid.value.length;
+        }
+    </script>
+</head>
+<body>
+    <h1>문자열 길이 : length</h1>
+    <p id="length1"></p>
+    <input type="text" id="userid">
+    <button type="button" onclick="fn_length()";>ID length</button>
+    <p id="length2"></p>
+
+    <script>
+        let text = "0123456789";
+        document.getElementById('length1').innerHTML = text.length;
+
+        /*text 변수에 저장된 종류(date type)에따라 사용할 수 있는 명령어가 달라짐
+        [ex) number, string, boolean]
+        객체는 명령어로 property와 method를 제공한다.
+        let text = 100; number 데이터
+        let text = "홍길동; string 데이터
+        let text = true; boolean 데이터
+        */
+        </script>
+</body>
+</html>

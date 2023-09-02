@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <h1>비교연산자 : ==, ===, !=, !==, <, <=, >, >=</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+    let x = 5;
+    document.getElementById("demo1").innerHTML = (x == 8); // false
+    document.getElementById("demo2").innerHTML = (x == 5); // true
+    document.getElementById("demo3").innerHTML = (x == "5"); //"5" -> 5 숫자로 형변환 true
+    document.getElementById("demo4").innerHTML = (x === "5"); // 값과 타입 일치여부 검사 false
+    document.getElementById("demo5").innerHTML = (x != 8); // true
+    document.getElementById("demo6").innerHTML = (x != "5"); // false
+    document.getElementById("demo7").innerHTML = (x !== "5"); // true
+    </script>
+</body>
+</html>

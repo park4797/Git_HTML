@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>변수선언 Block Scope</h1>
+    <p id="hee1"></p>
+    <script>
+        {
+            // 일반적인 보통 언어는 let과 동일함
+            let x = 10; // let 변수선언은 블록범위를 벗어나 사용 불가능
+        }
+        document.getElementById('hee1').innerHTML = x; // error 발생
+    </script>
+</body>
+</html>

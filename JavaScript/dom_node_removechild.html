@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Delete Node</h1>
+
+    <div id="course">
+        <p id="p1">자바</p>
+        <p id="p2">스프링</p>
+    </div>
+
+    <button type="button" id="demo" onclick="childremove()">엘리먼트 제거</button>
+
+    <script>
+        function childremove(){
+            let parent = document.getElementById("course");
+            let child = document.getElementById("p1");
+
+            parent.removeChild(child);
+        }
+    </script>
+</body>
+</html>

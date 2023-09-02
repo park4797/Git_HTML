@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript HTML Events</h2>
+    <p>현재 진행하는 과정을 선택하세요.</p>
+
+    <select id="subject">
+        <option value="">선택하세요.</option>
+        <option>HTML5</option>
+        <option>CSS3</option>
+        <option>JavaScript</option>
+    </select>
+
+    <p id="demo"></p>
+
+    <script>
+        document.querySelector("#subject").onchange = currentSubjectInfo;
+        // select, querySelector를 참조하려면 #을 넣어줘야 한다.
+
+        function currentSubjectInfo() {
+            const subject = document.querySelector("#subject");
+            if(subject.value == ""){
+                alert("다른 항목을 선택하세요.")
+                return;
+            }
+            document.querySelector("#demo").innerHTML = subject.value;
+}
+</script>
+</body>
+</html>

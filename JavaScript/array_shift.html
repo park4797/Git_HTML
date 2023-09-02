@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>shift 사용</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const fruits = ["딸기", "배", "복숭아"];
+        document.getElementById("demo1").innerHTML = fruits;
+        let fruit = fruits.shift(); // pop 과 반대로 맨 앞에걸 지워준다.
+        document.getElementById("demo2").innerHTML = fruits;
+        document.getElementById("demo3").innerHTML = "제거: " + fruit;
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memory</title>
+</head>
+<body>
+    <h1>변수와 대입연산자</h1>
+    <p id="demo"></p>
+    <script>
+    let x, y, z; //3개의 기억장소 생성, 기억장소를 변수라고 부른다.
+    x= 5;
+    y= 6;
+    z= x+y; // = 대입연산자 기준 우측의 코드를 값으로 해석하고, 좌측의 기억장소에 우측의 값을 대입
+    document.getElementById('demo').innerHTML= z;
+    </script>
+</body>
+</html>

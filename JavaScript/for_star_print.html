@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>* 5개 출력하기</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        document.write("<h3>별 5개 출력하기</h3>")
+        for (let i = 0; i<5; i++){
+            document.writeln("*");
+        }
+        document.write("<hr>");
+
+        document.write("<h3>정사각형 별 출력</h3>");
+        for (let i = 0; i<5; i++){
+            for (let j = 0; j<14; j++) {
+                document.write("*");
+            }
+
+            document.write("<br>");
+        }
+        document.write("<hr>")
+        
+        document.write("<h3>삼각형 별 출력</h3>");
+        for (let i = 0; i<5; i++){
+            for (let j = 0; j<=i; j++)
+                document.write("*");
+                document.write("<br>");
+                
+        }
+        document.write("<hr>");
+
+        document.write("<h3>역삼각형 별 출력</h3>");
+        for (let i = 0; i<5; i++){
+            for (let j = 5; j>i; j--)
+                document.write("*");
+                document.write("<br>");
+                
+        }
+        document.write("<hr>");
+        // i++, ++i 단독사용시 i = i +1;
+        /*
+        i = 10;
+        ++i + 10; = 21 (i = 11) 선진행
+        i++ + 10; = 20 (i = 11) 후진행
+        i를 먼저 읽어오기 때문에 연산시 우선 계산 후 나중에 ++이 적용된다.
+        */
+    </script>
+</body>
+</html>

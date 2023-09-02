@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>개인정보를 저장하기위한 기억장소 설계도 : 클래스</h1>
+
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="addr"></p>
+
+    <script>
+        // 개인정보 : 이름, 나이, 주소 3개
+        class Person { // 설계도
+            constructor(name, age, addr) { // constructor 생성자 함수
+                this.name = name;
+                this.age = age;
+                this.addr = addr;
+            }
+            age() {
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        // 회원정보 수집하고 표현할때, 반복적인 것들을 틀에맞춰 찍어낼때 사용
+
+        document.getElementById("demo").innerHTML =
+        `자동차1 이름은? ${myCar1.name} 이고, 연식은 ${myCar1.age()}`
+        
+        document.getElementById("name").innerHTML = person1.name;
+        document.getElementById("age").innerHTML = person1.age;
+        document.getElementById("addr").innerHTML = person1.addr;
+        
+    </script>
+</body>
+</html>

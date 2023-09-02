@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>원하는 날짜, 시간정보 지정하기</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="time()";> 시간 </button>
+
+    <script>
+        const p = new Date("October 13, 2023 15:15:00"); //현재 시간과 날짜를 읽어옴
+        // const p = new Date(2023, 7, 5, 15, 15, 0); 나열도 가능하다.
+        // const p = new Date(24 * 60 * 60 * 1000); 24시간 60분 60초 1000 ms
+
+        document.getElementById("demo1").innerHTML = p //.toString(); 생략
+
+        function time() {
+            const t = new Date();
+            document.getElementById("demo2").innerHTML = t;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String lower, upper</title>
+    <script>
+        function upper() {
+            let text = document.getElementById('demo1').innerHTML;
+            document.getElementById('demo1').innerHTML = text.toUpperCase();
+        }
+        function lower() {
+            let text = document.getElementById('demo1').innerHTML;
+            document.getElementById('demo1').innerHTML = text.toLowerCase();
+        }
+    </script>
+</head>
+<body>
+    <h1>toUpper(), toLower() methods</h1>
+    
+    <p id="demo1">Hello World!</p>
+    <button type="button" onclick="upper()";>대문자</button>
+    <button type="button" onclick="lower()";>소문자</button>
+</body>
+</html>

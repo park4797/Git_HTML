@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback 사용연습</h1>
+
+    <p id="demo1"></p>
+
+    <script>
+        function cry() {
+            console.log(cry);
+        }
+
+        function sing() {
+            console.log(sing);
+        }
+
+        function dance() {
+            console.log(dance);
+        }
+        /*
+        // 일반 함수
+        // 기분 좋을때 춤을 추고 싶으면 sing()함수에 dance()로 변경해야함
+        function checkfeel(feel) {
+            if(feel === "good"){
+                sing();
+            }else {
+                cry();
+            }
+        }
+        checkfeel("good");
+        // "good"일 때 dance가 출력되게 하고 싶다면 if 조건문에 sing()을 dance()로 수정해야함
+        checkfeel("sad");
+        */
+
+        //콜백 함수
+        // checkfeel 임반 함수 안에서 호출되는 함수들을 자유롭게 바꾸고 싶을때 사용
+        // JavaScript에서는 변수로 함수를 넣어 사용 가능한 것을 응용한 개념
+        function checkfeelCallBack(기본상태, 좋음, 나쁨) {
+            if(기본상태 == "good"){
+                좋음();
+            }else {
+                나쁨();
+            }
+        }
+
+        checkfeelCallBack("good", dance, cry);
+        // "good"일때 dance 하도록 checkfeelCallBack에서 호출할 함수를 지정할 수 있다.
+        checkfeelCallBack("not bad", dance, sing);
+    </script>
+</body>
+</html>

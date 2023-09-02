@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>특정범위의 값을 랜덤으로 가져오기</h1>
+    
+    <p id="demo"></p>
+
+    <script>
+        // min 변수에서 max 변수 범위의 값중 랜덤으로 가져온다
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min +1)) + min;
+        }
+
+        document.getElementById("demo").innerHTML = getRndInteger(10,20);
+        // 함수에서 10~20을 가져옴
+    </script>
+</body>
+</html>

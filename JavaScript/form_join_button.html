@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // <input type="button" onclick="validation"> 으로 호출되는 함수는 return만 사용한다.
+        function validation(){
+            let u_id = document.getElementById("u_id");
+            let u_pw = document.getElementById("u_pw");
+            let u_name = document.getElementById("u_name");
+            let addr = document.getElementById("u_addr");
+
+            // 취미체크 여부 확인
+            let u_hobby1 = document.getElementById("u_hobby1");
+            let u_hobby2 = document.getElementById("u_hobby1");
+            let u_hobby3 = document.getElementById("u_hobby1");
+            let u_hobby4 = document.getElementById("u_hobby1");
+
+            let agree1 = document.getElementById("agree1")
+            let agree2 = document.getElementById("agree2")
+        
+
+            //ID 입력값 유효성 검사
+            if (u_id.value == "") {
+                alert("아이디를 입력하세요.")
+                u_id.focus();
+                return;
+                // onsubmit으로 돌아가 중지시킴(첫 페이지로 이동)
+            }
+
+            //PW 입력값 유효성 검사
+            if (u_pw.value == "") {
+                alert("비밀번호를 입력하세요.");
+                u_pw.focus();
+                return;
+            }
+            //NAME 입력값 유효성 검사
+            if (u_name.value == "") {
+                alert("이름을 입력하세요");
+                u_name.focus();
+                return;
+            }
+            //address 입력값 유효성 검사
+            if (addr.value == "") {
+                alert("주소를 입력하세요");
+                addr.focus();
+                return;
+            }
+            
+            // hobby 체크 검사
+            let isHobbyChecked = false; //취미 체크박스가 하나라도 선택됐는가?
+            
+            /*
+            if (u_hobby1.checked == true) {
+                isHobbyChecked = true;
+            }
+            if (u_hobby2.checked == true) {
+                isHobbyChecked = true;
+            }
+            if (u_hobby3.checked == true) {
+                isHobbyChecked = true;
+            }
+            if (u_hobby4.checked == true) {
+                isHobbyChecked = true;
+            }
+            //취미가 1개라도 선택이 안되어 있으면?
+            */
+
+            console.log("length", document.getElementsByName("u_hobby").length);
+
+            let u_hobby = document.getElementsByName("u_hobby");
+            for (let i = 0; i < u_hobby.length; i++) {
+                if(u_hobby[i].checked == true) {
+                    isHobbyChecked = true;
+                }
+            }
+            
+            if(!isHobbyChecked) {
+                alert("취미를 1개이상 선택해주세요")
+                return;
+            }
+
+            // 메일수신 여부
+            if (!agree1.checked && !agree2.checked) {
+                alert("메일 수신여부를 선택요망");
+                return;
+            }
+
+            alert("유효성 검사성공");
+            
+            // document.forms[0].submit();
+            document.getElementById("joinFrm").submit(); // 버튼일 경우에만 사용가능
+        }
+    </script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form id="joinFrm" action="join_ok.html" method="post">
+        ID : <input type="text" id="u_id" name="u_id"><br>
+        PW : <input type="password" id="u_pw" name="u_pw"><br>
+        Name : <input type="text" id="u_name" name="u_name"><br>
+        addr : <input type="text" id="u_addr" name="u_addr"><br>
+        hobby :
+        <label for="u_hobby1">자바</label><input type="checkbox" id="u_hobby1" name="u_hobby">
+        <label for="u_hobby2">스프링</label><input type="checkbox" id="u_hobby2" name="u_hobby">
+        <label for="u_hobby3">오라클</label><input type="checkbox" id="u_hobby3" name="u_hobby">
+        <label for="u_hobby4">포트폴리오</label><input type="checkbox" id="u_hobby4" name="u_hobby">
+
+        <br>
+        Mail agree : <label for="agree1">동의</label><input type="radio" id="agree1" name="agree">
+                <label for="agree2">동의 안함</label><input type="radio" id="agree2" name="agree"><br>
+                <!--id는 중복될 수 없으므로 name을 일치시킴-->
+
+
+        <input type="button" value="회원가입" onclick="validation()"> <!--버튼일 경우에만 onclick을 사용-->
+    </form>
+</body>
+</html>

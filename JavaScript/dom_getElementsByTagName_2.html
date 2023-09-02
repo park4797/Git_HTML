@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM access - getElementsByTagName</h1>
+    <div id="main">
+    <p>자바</p>
+    <p>스프링</p>
+    <p>오라클</p>
+    </div>
+    <hr>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        // 배열(컬렉션) 형태로 참조
+        const x = document.getElementById('main'); // div태그 참조
+        const y = x.getElementsByTagName("p"); //3개
+        document.getElementById('demo').innerHTML = y[0].innerHTML;
+        document.getElementById('demo2').innerHTML = y.length;
+    </script>
+</body>
+</html>

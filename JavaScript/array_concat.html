@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열 합치기 : concat()</h1>
+
+    <p id="demo1"></p>
+
+    <script>
+        const myGirls = ["강부자", "강수지"];
+        const myBoys = ["나영석", "이서진", "이명한"];
+        const myArr = ["자바", "스프링", "오라클"];
+        const myArr2 = ["HTML5", "CSS"]
+        const myChildren = myGirls.concat(myBoys, myArr, myArr2,"박현준");
+        //따옴표가 있으면 문자열(데이터)로 인식. 없으면 Array로 인식. 값도 추가할 수 있다.
+
+        document.getElementById("demo1").innerHTML = myChildren;
+    </script>
+</body>
+</html>

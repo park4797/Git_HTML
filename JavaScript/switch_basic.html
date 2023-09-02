@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>switch 문으로 짝수, 홀수 확인하기</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        let number = 4;
+        let msg;
+
+        switch(number % 2) {
+            case 0: msg = "짝수";
+            break;
+            case 1: msg = "홀수";
+            break;
+        }
+
+        document.getElementById("demo").innerHTML = msg;
+    </script>
+</body>
+</html>

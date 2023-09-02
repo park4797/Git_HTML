@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object 1</title>
+</head>
+<body>
+    <h1>Object 데이터타입</h1>
+    <p>자동차의 기본정보</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        // 개별 변수를 이용하는 방식
+        let name = "Fiat";
+        let model = 500;
+        let weight = 850;
+        let color = "white";
+        document.getElementById('demo1').innerHTML =
+        "자동차 이름은? " + name + " 모델은? " + model + " 자동차 무게는? " + weight
+        + " 자동차 색상은? " + color;
+
+        // Object을 이용하는 방식
+        const car = {name: "Fiat", model : 500, weight : 850, color : "White"};
+        car.name;
+        car.model;
+        car.weight;
+        car.color;
+        document.getElementById('demo2').innerHTML =
+        "자동차 이름은? " + car.name + " 모델은? " + car.model + " 자동차 무게는? " + car.weight
+        + " 자동차 색상은? " + car.color;
+
+        
+    </script>
+</body>
+</html>

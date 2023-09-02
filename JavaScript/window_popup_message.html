@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction01() {
+            alert("경고 메세지")
+        }
+
+        function myFunction02() {
+            let txt = "";
+            if(confirm("게시물을 삭제하겠습니까?")) {
+                txt = "삭제함";
+            }else {
+                txt = "삭제를 취소함";
+            }
+            
+            document.getElementById("demo").innerHTML = txt;
+        }
+        // || 는 둘 중 하나라도 true이면 true로 해석
+        function myFunciton03() {
+            let txt = "";
+            let person = prompt("이름을 입력하세요", "홍길동")
+            if (person == null || person =="") {
+                tsxt = "입력을 취소 하였습니다.";
+            }else {
+                txt = `안녕하세요 ${person} 입니다.`;
+            }
+            document.getElementById("demo2").innerHTML = txt;
+        }
+    </script>
+</head>
+<body>
+    <h1>window객체의 팝업methods</h1>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <button type="button" onclick="myFunction01()";>팝업(alert)</button>
+    <button type="button" onclick="myFunction02()";>삭제(confirm)</button>
+    <button type="button" onclick="myFunciton03()">입력팝업(prompt)</button>
+
+</body>
+</html>

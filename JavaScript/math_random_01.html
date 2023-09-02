@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Math.ranom() - method 간단한 응용1</h1>
+
+    <p>콘솔 로그로 예제 확인</p>
+
+    <script>
+        /*
+            Math.radom(); 0.0 <= x <1.0)
+            Math.random() * 10 : 0.0 <= x < 10.0
+        */
+
+        let x = Math.floor(Math.random() * 10);
+        console.log("0~9 범위의 숫자 랜덤값은? : " , x);
+
+        x = Math.floor(Math.random() * 11);
+        console.log("0~10 범위의 숫자 랜덤값은? : ", x);
+
+        x = Math.floor(Math.random() * 100);
+        console.log("0~99 범위의 숫자의 랜덤값은? : ", x);
+
+        x = Math.floor(Math.random() * 101);
+        console.log("0~100 범위의 숫자의 랜덤값은? : ", x);
+
+        x = Math.floor(Math.random() * 10); +1;
+        console.log("1~10 범위의 숫자의 랜덤값은? : ", x);
+
+        x = Math.floor(Math.random() * 100) +1;
+        console.log("1~100 범위의 숫자의 랜덤값은? : ", x);
+    </script>
+</body>
+</html>

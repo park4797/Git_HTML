@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>window객체의 setInterval() methods</h1>
+    <p id="demo"></p>
+    <script>
+        let myVar = setInterval (myTimer, 1000); // 1초마다 myTimer 함수를 호출
+
+        function myTimer() {
+            const d = new Date(); // new 생성자함수()
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+        function reStart() {
+            myVar = setInterval (myTimer, 1000)
+        }
+    </script>
+    <button type="button" onclick="clearInterval(myVar)">정지</button>
+    <button type="button" onclick="reStart()">시작</button>
+    <!--myVar를 function으로 만들어 재호출하는 방식-->
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objebt 3</title>
+</head>
+<body>
+    <h1>object에 메소드 사용하기</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        // 객체는 속성과 메소드로 구성되어 있음
+        // property : 데이터(정보) 목적, method : 기능을 목적으로 둠
+        // powron객체는 속성은 name, age, addr, 메소드는 fullName() 으로 구성
+        // this 키워드 : person을 가리키는 의미
+        const person = {
+            name : "홍길동",
+            age : 100,
+            addr : "창동",
+            info : function () {
+                return this.name + " " + this.addr;
+            }
+        };
+        document.getElementById('demo1').innerHTML = person.info();
+        document.getElementById('demo2').innerHTML = person.info;
+        // fullName은 익명함수로 메소드 성질을 갖고 있고, 별도 이름 설정 가능함
+        // method 내부의 내용을 쓰려면 ()를 필수로 작성해야한다.
+    </script>
+</body>
+</html>

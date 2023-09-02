@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>let 동일한 변수를 재선언한 경우 에러발생</h1>
+    <p id="hee"></p>
+    <script>
+        let carName = "Volvo";
+        //let carName; //재선언 하면, 에러가 발생.
+        document.getElementById('hee').innerHTML = carName;
+    </script>
+</body>
+</html>

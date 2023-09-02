@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2 + 3 + "5"의 결과는?</h1>
+    <p id="hee"></p>
+    <script>
+        // 좌측에서 우측으로 계산이 진행된다. 타입이 String(문자열)로 일치가 되어 진행된다.
+        let x = 2 + 3 + "5" // 5 + "5" > "5" + "5" > 55
+        document.getElementById('hee').innerHTML = x
+    </script>
+</body>
+</html>

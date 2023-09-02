@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript HTML Events</h1>
+    <p>Click "Try it" to execute the displayDate() function</p>
+    <p id="demo"></p>
+    <button id="btn">클릭</button>
+
+    <script>
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        document.getElementById("btn").onclick = displayDate;
+    </script>
+</body>
+</html>

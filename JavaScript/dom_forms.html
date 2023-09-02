@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form태그와 하위요소 : 입력양식태그</h1>
+    <form id="joinFrm">
+        이름 : <input type="text" name="name" value="홍길동"><br>
+        주소 : <input type="text" name="addr" value="서울시 노원구"><br><hr>
+        <a href="http://www.naver.com">네이버</a> <br>
+        <input type="submit" value="회원가입">
+    </form>
+    <!-- form태그의 하위요소들 - input, select, textarea -->
+
+    <p id="demo"></p>
+
+    <script>
+        const x = document.forms['joinFrm'];
+        let text = "";
+        // x.length는 form태그의 하위요소(태그)들에서 a 태그는 제외된다.
+        console.log("from태그의 하위요소들", x.length);
+
+        //x.elements : form 태그의 하위요소들.
+        for (let i = 0; i < x.length; i++) {
+            text += x.elements[i].value + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

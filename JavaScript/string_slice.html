@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>slice() methods 사용하기</h1>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        let text = "Apple, Banana, Kiwi";
+        // let part = text.slice(7, 13); // 8번째 문자에서부터 14번째 문자 이전까지 가져옴
+        let part = text.slice(7); // 8번째 문자에서부터 마지막 문자까지 가져옴
+        document.getElementById('demo').innerHTML = part;
+
+        // let part2 = text.slice(-12); // 뒤에서 12번째 문자부터 마지막 문자까지 가져옴
+        let part2 = text.slice(-12, -6); // 뒤에서 12번째 문자부터 6 글자만 가져옴
+        document.getElementById('demo2').innerHTML = part2;
+        </script>
+</body>
+</html>

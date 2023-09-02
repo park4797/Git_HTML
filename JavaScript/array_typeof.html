@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열의 typeof : object</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const fruits = ["사과", "배", "딸기"];
+        document.getElementById("demo1").innerHTML = typeof fruits;
+        document.getElementById("demo2").innerHTML = Array.isArray(fruits);
+        document.getElementById("demo3").innerHTML = fruits instanceof Array;
+    </script>
+</body>
+</html>

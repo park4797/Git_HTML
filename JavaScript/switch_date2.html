@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>현재 요일을 출력하자.</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        //요일 의미 new Date().getDay() : 0~6 범위
+        switch (new Date().getDay()) {
+            case 0 : day = "주말";
+            break;
+            case 6 : day = "주말";
+            break;
+            default : day = "평일"; //0, 6을 제외한 나머지
+            
+        } // end switch
+        // break; 문 생략하면, 아래 case로 진행한다.
+        // break; 문 사용하면, switch문을 탈출한다.
+
+        document.getElementById("demo").innerHTML = `오늘은 ${day} 입니다.`;
+    </script>
+</body>
+</html>

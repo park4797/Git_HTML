@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>값이 존재하면 true로 해석한다.</h1>
+
+    <p>콘솔로 확인</p>
+
+    <script>
+        // 다음에 해당하는 값들을 true or false 로 해석해야하는 경우 모두 true로 해석된다.
+        console.log(Boolean(100));
+        console.log(Boolean(3.14));
+        console.log(Boolean(-15));
+        console.log(Boolean("Hello"));
+        console.log(Boolean("false"));
+        console.log(Boolean(1+7+3.14));
+
+        // false로 해당하는 예외의 예들
+        console.log(Boolean(0));
+        console.log(Boolean(-0));
+        console.log(Boolean(" ")); // 공백도 아스키코드가 존재해 true로 해석됨
+        let x; // undefined
+        console.log(Boolean(x));
+        let y = null;
+        console.log(Boolean(null));
+        let z = 10 / "Hello" //NaN
+        console.log(Boolean(z));
+
+    </script>
+</body>
+</html>

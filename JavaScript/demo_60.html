@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>국어, 영어, 수학 3개의 과목에 대한 합계, 평균을 구하는 함수 생성</h1>\
+    <h3>1번째 학생점수</h3>
+    <p id="tot_result1"></p>
+    <p id="avg1_result1"></p>
+    <p id="avg2_result1"></p>
+    <p id="tot2_result1"></p>
+    <h3>2번째 학생점수</h3>
+    <p id="tot_result2"></p>
+    <p id="avg1_result2"></p>
+    <p id="avg2_result2"></p>
+    <p id="tot2_result2"></p>
+    <!--출력할 공간(p)이 필요함-->
+    <script>
+        // function tot에 (각각 받을 결과)
+        function tot(kor, eng, mat) {
+            return kor + eng + mat;
+        }
+        function avg1(kor, eng, mat) {
+            return (kor + eng + mat) / 3;
+        }
+        function avg2(kor, eng, mat) {
+            let total = tot(kor, eng, mat);
+            return total / 3;
+        } // 중괄호 안 let 으로 다른함수를 가져와 선언하고, return식 생성 가능
+        function tot2(kor, eng, mat) {
+            let average = avg1(kor, eng, mat);
+            return average * 3;
+        } // let으로 avg1(kor, eng, mat)를 불러와 값을 설정했다.
+        let kor, eng, mat;
+        kor = 79;
+        eng = 85;
+        mat = 78;
+        
+        let kor2, eng2, mat2;
+        kor2 = 90;
+        eng2 = 87;
+        mat2 = 87;
+        
+        document.getElementById('tot_result1').innerHTML = tot(kor, eng, mat);
+        document.getElementById('avg1_result1').innerHTML = avg1(kor, eng, mat);
+        document.getElementById('avg2_result1').innerHTML = avg2(kor, eng, mat);
+        document.getElementById('tot2_result1').innerHTML = tot2(kor, eng, mat);
+
+        document.getElementById('tot_result2').innerHTML = tot(kor2, eng2, mat2);
+        document.getElementById('avg1_result2').innerHTML = avg1(kor2, eng2, mat2);
+        document.getElementById('avg2_result2').innerHTML = avg2(kor2, eng2, mat2);
+        document.getElementById('tot2_result2').innerHTML = tot2(kor2, eng2, mat2);
+        // 함수내 제목이 포함되어 있으면 함수 재성성 안해도됨?
+        // function을 만들고 리턴 설정 후
+        // let으로 매개변수 값 설정해주고
+        // document~로 출력 (안의 값도 설정해야함)
+        // 출력으로 넘긴 값이 함수식이 갖고 있는 리턴 계산식을 통해 다시 넘어온다.
+        // avg2는 total에 tot 값을 받아 리턴식을 만들 수 있다.
+    </script>
+
+</body>
+</html>

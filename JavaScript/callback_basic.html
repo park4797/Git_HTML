@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback 함수 만들고 사용하는 방법</h1>
+
+    <script>
+        /* 함수가 변수에 대입하는 구문.
+        let fn_test = function(a, b) {
+            return a + b;
+        }
+        */
+        
+        // 어떤 함수의 파라미터(매개변수)로써 함수를 전달하고, 어떤 행위나 작업이 완료된 직후
+        // 콜백함수를 호출하는 목적으로 사용한다.
+
+        // 1) 콜백함수 정의 및 사용
+        function print(callback) {
+            callback();
+        }
+        //  message를 print에 대입하는 구문
+        function message() {
+            alert("콜백함수");
+        }
+        print(message); // method 괄호는 뺀다(호출의 의미가 아니기 때문), 함수 이름이 매개변수로 전달된 것
+
+        // 2) 콜백함수 정의 및 사용
+        
+        function message2(callback) {
+            callback();
+        }
+
+        let msg = function(){
+            alert("익명함수를 사용한 콜백함수");
+        }
+
+        message2(msg);
+        // 변수를 거쳐 callback함
+
+        // 3) 콜백함수 정의 및 사용
+
+        function message3(callback) {
+            callback();
+        }
+
+        message3(function() {
+            alert("익명함수 전달");
+        })
+
+        // 직접적으로 callback함
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>callback 함수를 이용한 예제</h1>
+        <p id="demo"></p>
+
+        <script>
+            // callback 함수 용도로 사용된다. 사실상 출력용
+            function myDisplayer(something) {
+                document.getElementById("demo").innerHTML = something;
+            }
+
+            // callback 함수를 이용한 형태
+            function myCalculator(num1, num2, mycallback) {
+                let sum = num1 + num2;
+                mycallback(sum); // callback으로 호출, 내부적으로는 myDisplayer(sum); 으로 호출된다.
+                // myDisplayer(sum); // 함수를 직접호출
+            }
+
+            myCalculator(5, 5, myDisplayer); // 함수를 파라미터의 값으로 사용시, ()를 뺸다.
+
+            // myCalculator에 넣은 값이 sum 변수값이 적용되어, myDisplayer로 전달돼 출력
+        </script>
+    </body>
+    </html>
+</body>
+</html>

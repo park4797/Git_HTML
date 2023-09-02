@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>사칙연산 : + - * / %</h1>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>
+    <p id="mod"></p>
+    <!--modulation? 나머지? % x가 10이고 y가 5니까 딱 나뉘므로 나머지는 0-->
+    <script>
+        let x = 8;
+        let y = 5;
+        document.getElementById("add").innerHTML = "+ : " + (x + y);
+        document.getElementById("sub").innerHTML = "- : " + (x - y);
+        document.getElementById("mul").innerHTML = "* : " + (x * y);
+        document.getElementById("div").innerHTML = "/ : " + (x / y);
+        document.getElementById("mod").innerHTML = "% : " + (x % y);
+        // "+ : " + ( ~ ) 사칙연산 생각
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수의 순차적인 실행</h1>
+    <p>함수내부에서 다른 함수를 호출하는 형태.</p>
+    
+    <p id="demo"></p>
+
+    <script>
+        function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+    }
+
+        // 함수 내부에서 다른 함수를 호출
+        function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        myDisplayer(sum); // 타 함수 호출
+    }
+
+    myCalculator(5, 5);
+</script>
+</body>
+</html>

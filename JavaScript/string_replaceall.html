@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplaceAll</title>
+</head>
+<body>
+    <h1>replaceAll() methods</h1>
+    <p id="demo1"></p>
+    <script>
+        let text = "I love cats. Cats are very easy to love. Cats are very popular.";
+        text = text.replaceAll("Cats", "Dogs");
+        console.log(text);
+        text = text.replaceAll("cats","dogs")
+        console.log(text);
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열 튜토리얼</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        /*
+        array : 동일한 종류의 데이터를 하나의 이름으로 관리하는 기억장소.
+        하위요소는 배열[0]~[9] 순서로 가리킴
+        */
+        const cars = ["Volvo","Fiat","BMW"];
+        cars[3] = "Opel"; // 없는 기억장소를 자동으로 추가함
+        document.getElementById('demo1').innerHTML = cars; // 배열 전체를 가리킴
+        document.getElementById('demo2').innerHTML = cars[0];
+        document.getElementById('demo3').innerHTML = cars[1];
+        document.getElementById('demo4').innerHTML = cars[2];
+        document.getElementById('demo5').innerHTML = cars[3]; // undifined
+    </script>
+</body>
+</html>

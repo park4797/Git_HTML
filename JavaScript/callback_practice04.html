@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback 함수 연습</h1>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+
+        // 1)
+        function sum(x, y, callback) {
+            callback(x + y); // callback 함수 호출, 식 설정
+        }
+
+        sum(5, 10, function(result){ // 결과값을 넣을 수 있는 익명함수 생성
+            console.log(result); // 결과값 출력
+        });
+
+        // 2)
+        function sayHello(callback) {
+            let name = "코딩"; // 값을 변수로 선언
+            callback(name); // 콜백함수를 호출해 변수를 넣는다.
+        }
+        
+        // 익명 화살표 콜백 함수
+        sayHello((name)=>{
+            console.log(`Hello ${name}`);
+            document.getElementById("demo").innerHTML = `Hi ${name}`;
+        });
+
+        // 3)
+        function hi(name){ // 별도의 함수로 정의
+            console.log(`hi ${name}!`)
+        }
+
+        function Hello(callback){
+            let name = "코딩"
+            callback(name);
+        }
+
+        function Hello2(callback){
+            let name = "자바"
+            callback(name);
+        }
+
+        Hello(hi);
+        Hello2(hi);
+    </script>
+</body>
+</html>

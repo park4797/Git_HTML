@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수정의 : 매개변수와 return값</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        // x, y : 인수, 매개변수, parameter (자판기에 투입)
+        function add(x, y) {
+            return x + y; // 덧셈 계산기(자판기)
+        }
+        let result = add(10, 20);
+        document.getElementById("demo1").innerHTML = "add(10, 20): " + result;
+        document.getElementById("demo2").innerHTML = "add(100, 200): " + add(100, 200);
+    </script>
+</body>
+</html>

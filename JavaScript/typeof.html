@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>typeof 키워드로 데이터타입 확인하기</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        let v1 = 10;
+        document.getElementById('demo1').innerHTML = typeof v1;
+        let v2 = "홍길동";
+        document.getElementById('demo2').innerHTML = typeof v2;
+        let v3 = true;
+        document.getElementById('demo3').innerHTML = typeof v3;
+        let v4;
+        document.getElementById('demo4').innerHTML = typeof v4;
+        let v5 = 100; // number
+        // v5.명령어. 숫자열 기능에 해당하는 명령어
+        v5 = "자바"; // string
+        // 기본적으로 마지막에 쓰여진 것으로 인식한다.
+        // v5. 명령어. 문자열 기능에 해당하는 명령어
+        document.getElementById('demo5').innerHTML = typeof v5;
+        
+    </script>
+</body>
+</html>

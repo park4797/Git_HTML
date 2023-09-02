@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        // 1) 함수가 매개변수가 없는 경우
+
+        let hello = "";
+
+        hello = () => {
+            return "Hello World"
+        }
+
+        document.getElementById("demo").innerHTML = hello();
+
+        // 아래와 위의 방식의 결과값은 같다.
+
+        hello = () => "Hello World";
+
+        document.getElementById("demo").innerHTML = hello();
+
+        // 2) 함수가 매개변수가 있는 경우
+
+        let msg = "";
+
+        msg = (val) => "Hello" + val;
+
+        document.getElementById("demo2").innerHTML = msg(홍길동);
+        // 아래와 위의 방식의 결과값은 같다.
+
+
+        msg = val => "Hello" + val;
+
+        document.getElementById("demo2").innerHTML = msg(홍길동);
+
+    </script>
+</body>
+</html>

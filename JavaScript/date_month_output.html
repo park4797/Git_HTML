@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘은 몇월인가?</h1>
+
+    <p id="demo1"></p>
+
+    <script>
+        const months = ["1월", "2월", "3월", "4월", "5월", "6월",
+                        "7월", "8월", "9월", "10월", "11월", "12월"];
+                        
+        const d = new Date();
+        let month = months[d.getMonth()];
+        document.getElementById("demo1").innerHTML = month;
+    </script>
+</body>
+</html>

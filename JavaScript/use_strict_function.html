@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>use strict : 엄격 모드, 함수안의 변수사용</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        "use strict";
+        print();
+
+        function print() {
+            y = 3.14; // 함수안의 변수사용도 변수를 선언하지 않으면, use strict에 영향을 받는다.
+            document.getElementById("demo").innerHTML = y;
+        }
+    </script>
+</body>
+</html>

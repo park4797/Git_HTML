@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+            /*
+    <div>
+        <p>자바</p>
+        <p>스프링</p>
+        <p>마이바티스</p>
+    </div>
+    */
+        let div = document.createElement("div");
+
+        let para = document.createElement("p");
+        let text1 = document.createTextNode("자바");
+        para.appendChild(text1); // <p>자바</p> 메모리상 생성
+
+        let para2 = document.createElement("p");
+        let text2 = document.createTextNode("스프링");
+        para2.appendChild(text2);
+
+        let para3 = document.createElement("p")
+        let text3 = document.createTextNode("마이바티스");
+        para3.appendChild(text3);
+
+        div.appendChild(para);
+        div.appendChild(para2);
+        div.appendChild(para3);
+
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>

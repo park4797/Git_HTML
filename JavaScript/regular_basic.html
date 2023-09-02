@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript String Methods</h1>
+    <p>Search a string for "W3Schools", and display the position of the match:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    /*
+    정규식
+    문법구조 :
+        /정규식문자열/플래그
+    */
+    let text = "Visit W3Schools!"; 
+    // let n = text.search("W3Schools"); // 일반문자열
+    let n = text.search(/w3Schools/i); // 정규식문자열
+    // i = ignore 머시기(대소문자를 구분안하겠다는 의미)
+    document.getElementById("demo").innerHTML = n;
+    </script>
+    
+    </body>
+</html>

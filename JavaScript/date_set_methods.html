@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>날짜 세팅</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <!-- <button onclick="Year()">날짜 세팅</button> -->
+
+    <script>
+        // 2025년 8월 10일 10시 50분
+        const d = new Date();
+        d.setFullYear(2025, 8, 10, 10, 50);
+        document.getElementById("demo1").innerHTML = d;
+
+        const p = new Date();
+        p.setFullYear(2025);
+        p.setMonth(8);
+        p.setDate(10);
+        p.setHours(10);
+        p.setMinutes(50);
+        document.getElementById("demo2").innerHTML =
+        `
+        ${p.getFullYear()}년 ${p.getMonth(+1)}월 ${p.getDate()}일
+        ${p.getHours()}시${p.getMinutes()}분
+        `
+    
+        /*
+        function Year() {
+        const y = new Date();
+        y.setFullYear(2024);
+        y.setMonth(10);
+        document.getElementById("demo1").innerHTML = y;
+        }
+        */
+    </script>
+</body>
+</html>

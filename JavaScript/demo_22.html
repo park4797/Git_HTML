@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>변수선언없이 변수 직접사용</h1>
+    <p id="hee"></p>
+    <script>
+        // let x, y; [let, var] 키워드 사용 없이 사용 가능하긴 하다.
+        // 내부적으로 기억장소가 생성되어진다.
+        x = 5;
+        y = 6;
+        z = x + y;
+        document.getElementById('hee').innerHTML = z;
+    </script>
+</body>
+</html>

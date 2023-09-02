@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>비교연산자 예제</h1>
+    <p>비교연산자입니다.</p>
+    <p id="demo"></p>
+    <script>
+        // 아스키코드란 0을 입력하면 컴퓨터가 받아들이는? 그에 해당하는? 코드값
+        // 아스키코드값으로 비교가 이루어진다. 0 ~ 127 범위
+        // 유니코드(아스키코드 포함) : 0 ~ 65535 범위
+        let text1 = "A"; // 65
+        let text2 = "B"; // 66
+        let result = text1 < text2; // true of false 값이 표출됨
+        document.getElementById('demo').innerHTML = "A가 B보다 작습니까?" + result;
+    </script>
+</body>
+</html>

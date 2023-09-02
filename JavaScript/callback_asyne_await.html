@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>async, await 사용</h1>
+
+    <script>
+        async function greet() {
+            return "Hello"; // async 키워드에 의하여 "Hello" 값을 Promise() 객체로 리턴 해준다.
+        }
+
+        console.log(greet());
+
+        greet().then(console.log());
+
+        function greet2() {
+            return new Promise(function(){
+                setTimeout(function(){
+                    resolve("Hello");
+                }, 1000);
+            });
+        }
+
+        // 일반 순차프로그래밍처럼 동일하게 동작된다.
+        (async function() {
+            let result = await greet2(); // await : resolve 될 때 까지 대기를 시켜준다. (A > B > C) 순서를 지켜준다.
+            console.log(result);
+        })(); // 괄호는 한 단위로 묶어주기 위함
+
+        /* 동기
+        A()
+        B()
+        C()
+        결과 : A > B > C
+
+        비동기
+        A()
+        B() - 비동기. B()가 완료되는 것과 상관없이 C() 진행
+        C()
+        결과 : A > C > B
+        */
+    </script>
+</body>
+</html>

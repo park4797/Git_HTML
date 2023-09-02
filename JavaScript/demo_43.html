@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>비교연산자 예제</h1>
+    <p>비교연산자입니다.</p>
+    <p id="demo"></p>
+    <script>
+        let text1 = 20; // 문자열로 표시되지 않으면, 그냥 숫자 비교
+        let text2 = 5; 
+        let result = text1 < text2; 
+        document.getElementById('demo').innerHTML = "20은 5보다 작습니까?" + result;
+    </script>
+</body>
+</html>

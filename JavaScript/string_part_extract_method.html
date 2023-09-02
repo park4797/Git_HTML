@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        /*
+        이론 : 인덱스 0은 첫 번째 위치의 문자를 가리킨다.
+        slice(start, end)
+        substring(start, end)
+        substr(start, length)
+        */
+        let text = "Apple, Banana, Kiwi"
+        // slice(7, 13) text.substring(7, 13) : 인덱스 13의 위치의 문자(,)는 포함하지 않는다.
+        document.getElementById("demo1").innerHTML = text.slice(7, 13) // Banana
+        document.getElementById("demo2").innerHTML = text.substring(7, 13) // Banana
+        document.getElementById("demo3").innerHTML = text.substr(7, 6) // Banana
+        // substr(7, 6) : 6의 글자수, 길이
+
+    </script>
+</body>
+</html>

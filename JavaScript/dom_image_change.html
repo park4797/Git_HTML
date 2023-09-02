@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>img태그를 참조하여, 이미지 변경</h1>
+
+    <img id="img1" src="./image/pic_bulboff.gif">
+
+    <script>
+        // 태그를 참조할 경우 해당태그에서 지원하는 속성, 메서드()를 사용해야 함
+        function on() {
+        document.getElementById("img1").src = "./image/pic_bulbon.gif";
+        }
+    </script>
+    
+    <button onclick="on()">불켜기</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>insert Node</h1>
+
+    <div id="course">
+        <p id="p1">자바</p>
+        <p id="p2">스프링</p>
+    </div>
+
+    <button id="demo" onclick="childAppend()">엘리먼트 삽입</button>
+
+    <script>
+        function childAppend(){
+            const para = document.createElement("p"); // <p></p>
+            const node = document.createTextNode("mybatis"); // "mybatis"
+            para.appendChild(node); // <p>mybatis</p> 메모리상 생성.
+
+            const element = document.getElementById("course"); // div태그 참조
+            const child = document.getElementById("p1"); // <p id="p1">자바</p>
+
+            element.insertBefore(para, child); // 맨 앞 자식으로 추가
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>add Node</h1>
+
+    <div id="course">
+        <p>자바</p>
+        <p>스프링</p>
+    </div>
+
+    <button id="demo" onclick="childAppend()">클릭</button>
+
+    <script>
+        function childAppend(){
+            const para = document.createElement("p"); // <p></p>
+            const node = document.createTextNode("mybatis"); // "mybatis"
+            para.appendChild(node); // <p>mybatis</p> 메모리상 생성.
+
+            const element = document.getElementById("course"); // div태그 참조
+            // 위에 div에 자식을 추가시키겠다는 의미
+            element.appendChild(para); // 마지막요소로 추가
+            
+        }
+    </script>
+</body>
+</html>

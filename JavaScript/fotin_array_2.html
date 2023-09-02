@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for~in : array(배열)</h1>
+    
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [45, 4, 9 ,16, 25]
+        
+        let txt = 0; // number 타입
+        for(let x in numbers) {
+            txt += numbers[x];
+            console.log(typeof numbers[x]); // txt = txt + numbers[x]
+        }
+        // let txt = 0;을 주면 배열의 값을 모두 합함 (숫자로 계산)
+        // let txt = ""; 공백을 주면 배열을 나열함 (문자열로 나열)
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</body>
+</html>

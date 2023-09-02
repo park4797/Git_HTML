@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>join 사용</h1>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const car = ["poter", "bmw", "benz", "ray"];
+        document.getElementById('demo').innerHTML = car.join(" / ");
+        // array 항복 사이마다 무언가를 삽입할 때
+        car.pop();
+        document.getElementById('demo2').innerHTML = car; //.pop(); 마지막 요소만 출력
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if ~ else if ~ else 문 : 다중 if문</h1>
+
+    <p id="다중"></p>
+
+    <script>
+        /*
+        //시간 이외에 다른 날짜관련 정보도 참조할 경우 아래 방식으로 작성
+        const 시간 = new Date(); //날짜, 시간의 모든정보를 포함
+        let time = 시간.getHours();
+        let month = 시간.getMonth();
+        */
+
+        let time = new Date().getHours(); // 시간만 뽑기 위한 코딩
+
+        //조건식을 만들 경우, 범위를 최소화(상위조건)로 구성해야 한다.
+        let greeting;
+
+        if (time < 10) {
+            greeting = "좋은 아침입니다!"; // true일시 하위 코드들은 작동하지 않음
+        }else if (time < 20) {
+            greeting = "좋은 하루입니다.";
+        }else {
+            greeting = "즐거운 저녁입니다.";
+        }
+
+        document.getElementById("다중").innerHTML = greeting;
+    </script>
+</body>
+</html>

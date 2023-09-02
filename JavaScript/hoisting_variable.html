@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>변수 호이스팅</h1>
+    <p id="demo"></p>
+    <script>
+        /*
+        프로그래밍의 기본은 1. 변수선언(정의, 생성) 2.변수사용 순서로 진행된다.
+        */
+        // var x; 실행시 이 위치로 이동하게 된다.
+        x = 5; // 변수 선언없이 사용
+        let elem = document.getElementById("demo");
+        elem.innerHTML = x;
+
+        var x; // var로 선언된 변수가 자바스크립트 맨 위로 올려, 실행을 하게된다.
+    </script>
+</body>
+</html>

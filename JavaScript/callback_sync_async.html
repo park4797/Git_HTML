@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>동기와 비동기 의미</h1>
+
+    <script>
+        // 동기 : 하나의 작업이 완료되어야만 그 다음의 작업이 진행, 실행되는 의미.
+        // "가"가 출력되어야 "나"가 출력되고, "다"가 출력된다.
+        console.log("가");
+        console.log("나");
+        console.log("다");
+
+        // 비동기 : 하나의 작업이 완료되는 것과 상관없이, 다음의 작업이 진행, 실행되는 의미.
+        
+        console.log("가")
+        /*
+        setTimeout(() => {
+            console.log("나")
+        }, 1000);
+        */
+        setTimeout(function() {
+            console.log("나");
+        }, 0); // 0 값을 줘도 후순으로 나온다.
+
+        // 동기
+        //setTimeout(console.log("나"), 1000);
+        console.log("다");
+    </script>
+</body>
+</html>

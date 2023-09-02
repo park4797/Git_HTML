@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>논리연산자 : &&(and) ||(or), !(not); </h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        let x = 6;
+        let y = 3;
+        document.getElementById("demo1").innerHTML = !(x === y); // T
+        document.getElementById("demo2").innerHTML = !(x < 7 || y > 4); // F
+        document.getElementById("demo3").innerHTML = !(x > 3 && y > 1); // F
+        document.getElementById("demo4").innerHTML = !(x > y); // F
+        // !는 반대의 결과를 나타내줌
+    </script>
+</body>
+</html>

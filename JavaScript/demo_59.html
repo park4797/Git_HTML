@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>화씨를 섭씨로 변환하는 함수</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        function  toCelsius(f) {
+            return (5/9) * (f-32);
+        }
+        document.getElementById("demo1").innerHTML = toCelsius(70);
+        // 매개변수에 값을 제공하지 않아도 사용 가능(자바스크립트 한정)
+        document.getElementById("demo2").innerHTML = toCelsius();
+        // NaN : Not a Number
+        document.getElementById("demo3").innerHTML = toCelsius;
+        // 함수호출에서 toCelsius ()가 없다면?. 함수의 내용을 참조한다.
+    </script>
+</body>
+</html>

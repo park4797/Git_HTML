@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>use strict : not allowed delete</h1>
+    <script>
+        "use strict";
+        let x = 3.14;
+        delete x; // 엄격모드에서는 지원해주지 않는다. error 발생
+    </script>
+</body>
+</html>

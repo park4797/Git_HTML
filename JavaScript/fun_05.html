@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuction 5</title>
+</head>
+<body>
+    <h1>함수안의 로컬변수</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        // let carName, text는 지역변수
+        // 지역변수는 함수범위를 벗어난 곳에서는 사용 불가능
+        function myFunction() {
+            let carName = "volvo";
+            let text = "차이름은 " + carName + " 입니다.";
+            document.getElementById('demo1').innerHTML = text;
+        }
+        
+        carName = "현대자동차"; // 새로운 변수로 인식, let 없이 변수선언(JavaScript 특성)
+        document.getElementById('demo2').innerHTML = carName;
+        myFunction();
+    </script>
+</body>
+</html>

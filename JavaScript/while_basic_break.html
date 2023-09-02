@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>while 반복문, break문</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = "";
+        let i = 0;
+
+        // 무한루프 유의할것. (조건식에서 빠져나올 수 있는 작업이 필요)
+        while(true) {
+            if (i === 5) break;
+            // text += "<br> 현재 숫자는" + i ;
+            text += `<br> 현재 숫자는? ${i}`;
+            i++;
+            
+            console.log(text);
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

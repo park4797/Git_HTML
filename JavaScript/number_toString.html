@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>숫자를 문자열로 변환. 진법을 사용</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        let myNumber = 32;
+        document.getElementById("demo1").innerHTML = "2진수 " + myNumber.toString(2);
+        document.getElementById("demo2").innerHTML = "10진수 " + myNumber.toString(8);
+        document.getElementById("demo3").innerHTML = "12진수 " + myNumber.toString(10);
+        document.getElementById("demo4").innerHTML = "16진수 " + myNumber.toString(16);
+
+    </script>
+</body>
+</html>

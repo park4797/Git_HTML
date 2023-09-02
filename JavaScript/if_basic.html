@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>제어문 : if문</h1>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const t = new Date();
+        if(t.getHours() < 18) {
+            document.getElementById("demo").innerHTML = "Bad Morning";
+        }
+        // true이면 중괄호 안의 코드가 실행이되고 false일시 실행되지 않음
+
+        if(new Date().getDay() < 5) {
+            document.getElementById("demo2").innerHTML = "Well done"
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i = 2;
+let len = cars.length;
+let text = "";
+// let i = 2;를 for문이 끝나고도 사용하기 위해
+for (; i < len; i++) {
+    text += cars[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+<script>
+    const car = ["BMW", "Volvo", "Saab", "Ford"];
+    
+    let z = 0;
+    let leng = car.length;
+    let text2 = "";
+    
+    for (; z < leng; ) {
+    text += car[z] + "<br>";
+    i++;
+    }
+    document.getElementById("demo").innerHTML = text2;
+    </script>
+
+</body>
+</html>

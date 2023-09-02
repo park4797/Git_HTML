@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test2</title>
+</head>
+<body>
+    <h1>1~100까지의 짝수의 합을 출력</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        let sum = 0;
+        let i = 0;
+
+        while(i <= 100) {
+            if(i % 2 == 0){
+                sum += i;
+            }
+            i++
+        }
+
+        document.getElementById("demo").innerHTML = sum;
+    </script>
+</body>
+</html>

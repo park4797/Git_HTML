@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>노드(Node) 변경하기</h1>
+
+    <div id="course">
+        <p id="p1">자바</p>
+        <p id="p2">스프링</p>
+    </div>
+
+    <button type="button" id="demo" onclick="childremove()">엘리먼트 변경</button>
+
+    <script>
+        function childremove(){
+            let parent = document.getElementById("course");
+            let child = document.getElementById("p1");
+            
+            let para = document.createElement("p");
+            let txt = document.createTextNode("JAVA");
+
+            let attr = document.createAttribute("id"); // 속성추가
+            attr.value = "p1";
+            para.setAttributeNode(attr); // <p id="p1"></p>
+            
+            para.appendChild(txt); // <p id="p1">JAVA</p>
+
+            // 기존노드를 변경
+            parent.replaceChild(para, child) // 한글 자바를 지우고 JAVA로 변경
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String locate</title>
+</head>
+<body>
+    <h1>String locate</h1>
+    <p id="demo1"></p>
+    <script>
+        let text = "Plz locate where 'locate' occurs!";
+        let index = text.indexOf("locate");
+        // text.indexOf('locat',15); 이렇게 위치를 지정해서 시작지점을 변경가능
+        // 지정된 텍스트가 문자열에서 처음 나타나는 인덱스를 반환
+
+        // let index = text.lastIndexOf("locate");
+        // 지정한 텍스트가 문자열에서 마지막으로 나타나는 인덱스
+        document.getElementById('demo1').innerHTML = index;
+        </script>
+</body>
+</html>

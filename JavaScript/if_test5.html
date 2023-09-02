@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>현재 시간이 오전인가 오후인가</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        /*
+        const p = new Date().getHours();
+        let time;
+        */
+        const p = new Date().getHours();
+        
+        if (p < 12) {
+            time = "오전";
+        }else if (p > 12) {
+            time = "오후";
+        }
+        
+        document.getElementById("demo").innerHTML = `현재 시각은 ${time}입니다.`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h2>Looping an Array</h2>
+
+    <p id="demo"></p>
+
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>"; // li에 fruits[i]를 더해 text로 출력?(붙인다).
+    }
+    text += "</ul>";
+    /* i에 숫자값을 적용시키기 위해 fLen이라는 변수를 설정하여 fruits.length;로 설정하여
+    숫자를 출력시키고 적용시킨듯함
+    
+    */
+
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

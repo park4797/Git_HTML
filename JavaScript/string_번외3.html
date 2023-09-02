@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The padStart() Method</h2>
+
+<p>The padStart() method pads a string from the start.</p>
+<p>It pads the string with another string (multiple times) until it reaches a given length.</p>
+
+<p id="demo"></p>
+
+<script>
+let numb = 5;
+let text = numb.toString();
+document.getElementById("demo").innerHTML = text.padStart(4,0);
+//document.getElementById("demo").innerHTML = text.padEnd(4,0);
+//(4,0) 전체 4자리로 표현하고 나머지는 0으로 채우겠다.
+// padStart는 왼쪽 padEnd는 오른쪽부터 몇 번째에 무엇을 몇 개 붙일건지 설정 가능
+</script>
+
+</body>
+</html>

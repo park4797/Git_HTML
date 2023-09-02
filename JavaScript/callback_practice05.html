@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback 함수 응용</h1>
+
+    <p id="demo"></p>
+
+    <script>
+
+        // 메인 함수
+        function introduce(lname, fname, callback) { // 소개(성, 이름, 콜백)
+            let fullname = lname + fname; // 풀네임은 성+이름
+            document.getElementById("demo").innerHTML = fullname;
+
+            callback(fullname); // 콜백의 값은 풀네임
+        }
+
+        function hello(name) { // 인사함수와 매개변수
+            console.log(`안녕하세요 저는 ${name} 입니다.`); // 문구 + 매개변수 + 출력
+        }
+
+        function bye(name) { // 감사함수와 위와 같은 매개변수
+            console.log(`${name}이었습니다. 감사합니다.`); // 문구 + 매개변수 + 출력
+        }
+
+        introduce("홍", "길동", hello); // 메인함수 호출(성, 이름, 인사함수)
+        introduce("손", "흥민", bye); // 메인함수 호출(성, 이름, 감사함수)
+        // 전달할 콜백 함수 종류만 바꿔줌
+
+    </script>
+</body>
+</html>

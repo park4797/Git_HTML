@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM access _ getElementById</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // p 태그를 id속성으로 참조할때
+        // innerText는 태그지원을 안해줌, innerHTML은 태그지원 속성
+        document.getElementById("demo").innerHTML = "<b>Hello</b>"
+    </script>
+</body>
+</html>

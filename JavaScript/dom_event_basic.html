@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        function txtChange(){
+            document.getElementById("spring").innerHTML = 'spring';
+        }
+        재사용이 어려움
+        용도가 같다면 합칠 생각을 하는게 중요.
+        */
+        // 호출시 this 를 이용하여, 공통함수로 사용할 수 있다.
+        function txtChange(obj){
+            let color = "";
+            let name = "";
+            if(obj.id === "spring") {
+                color = "red";
+                name = "spring";
+                alert("스프링");
+            }else if(obj.id === "oracle"){
+                color = "blue";
+                name = "oracle";
+                alert("오라클");
+            }
+            obj.style.color = color;
+            obj.innerHTML = name;
+
+            console.log("obj", obj.id);
+            //obj.innerHTML = "Spring";
+        }
+    </script>
+</head>
+<body>
+    <h1>dom event</h1>
+    <h2 onclick="this.innerHTML = 'JAVA'">자바</h2>
+    <h2 id="spring" onclick="txtChange(this)">스프링</h2>
+    <h2 id="oracle" onclick="txtChange(this)">오라클</h2>
+
+
+</body>
+</html>

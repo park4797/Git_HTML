@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1</title>
+    <script>
+        function getTime() {
+            document.getElementById('time2').innerHTML = Date();
+        }
+    </script>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <p id="time"></p>
+    <p id="time2"></p>
+    <p id="time3"></p>
+    <button type="button" onclick="document.getElementById('time').innerHTML = Date();">
+        시간 읽어오기
+    </button>
+    <button type="button" onclick="getTime()">시간 읽어오기2</button>
+    <button type="button" onclick="this.innerHTML = Date()">시간 읽어오기3</button>
+    <!--버튼 자체에 넣을 수도 있다. 직접 코드를 넣어도 되고 함수로 만들어 넣을 수도 있다.-->
+</body>
+</html>

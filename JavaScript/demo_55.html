@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>논리연산자 : &&(and) ||(or), !(not); </h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        /*
+        ||(or) 연산자 : 논리 or 연산자. 좌, 우측의 값이 하나라도 일치하면 결과값이 true
+        */
+        let x = 6; // 초기값
+        let y = 3;
+        document.getElementById("demo1").innerHTML = (x == 5 || y == 5); // f
+        document.getElementById("demo2").innerHTML = (x == 6 || y == 0); // t
+        document.getElementById("demo3").innerHTML = (x == 0 || y == 3); // t
+        document.getElementById("demo4").innerHTML = (x == 6 || y == 3); // t
+    </script>
+</body>
+</html>

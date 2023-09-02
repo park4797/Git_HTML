@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array의 길이 : length</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const fruits = ["Banana", "Apple", "Orange", "Mango", "PineApple"];
+        // let size = fruits.length;
+        document.getElementById('demo1').innerHTML = fruits.length;
+        document.getElementById('demo2').innerHTML = fruits[fruits.length -1];
+        document.getElementById("demo3").innerHTML =
+        `배열의 마지막 요소의 값 ${fruits[fruits.length-1]}`; 
+        // length는 항목의 갯수를 출력하고 그에 -1을 하면 마지막 요소가 나온다.
+        // back-ticks 사용시 안에서 변수 사용 가능
+    </script>
+</body>
+</html>

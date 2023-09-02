@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>정규식 test(), match() methods</h1>
+
+    <p id="demo">the best things in life are free! b</p>
+    <p id="테스트"></p>
+    <p id="매치"></p>
+    <p id="서치"></p>
+
+    <script>
+        let text = document.getElementById('demo').innerHTML;
+        const re = /b/g;
+        document.getElementById('테스트').innerHTML = re.test(text);
+        document.getElementById("매치").innerHTML = text.match(re);
+        document.getElementById("서치").innerHTML = text.search(re);
+        // re.test(text); ()를 test 하겠다. 정규식에 해당하는 것이 있는지, 값은 true, false
+        // text.match(re); 이면 배열로 가져오고
+        // text.search(re); 이면 위치를 나타내줌
+    </script>
+
+    <h1>test bla bla</h1>
+    <p id="확인">이 내용에 들어가 있는지 확인하기</p>
+    <p id="출력"></p>
+
+    <script>
+        let txt = document.getElementById('확인').innerHTML;
+        let 정규식 = /내/;
+        document.getElementById('출력').innerHTML = 정규식.test(txt);
+        // 찾고자 하는 곳의 내용을 담고, 사용할 정규식을 선언하고,
+        // 출력하고자 하는곳에 정규식과 내용과 활용할 것을 적는다.
+    </script>
+</body>
+</html>

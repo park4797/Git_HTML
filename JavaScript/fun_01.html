@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <h1>함수 선언하기.</h1>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <script>
+        // 변수선언 : 데이터를 보관하는 기억장소를 생성하고, 기억장소를 가리키는 이름 지정
+        // 함수로 지정한 것은 여러 곳에서 재사용하기 위함
+        let x, y, z;
+        x = 10;
+        y = 20;
+        z = x + y;
+        document.getElementById('result1').innerHTML = z;
+        
+        // 용도에 맞는 이름의 함수를 정의(선언)
+        function add(a, b) {
+            return a + b; // return : 함수를 종료하고, 반환값을 호출하는 곳으로 보냄
+        }
+        document.getElementById('result2').innerHTML = add(10, 20);
+        document.getElementById('result3').innerHTML = add(5, 10);
+        document.getElementById("result4").innerHTML = add(100, 200);
+        // let는 값을 부여하고 시작, return은 값을 넣어 돌려받는 식
+    </script>
+</body>
+</html>

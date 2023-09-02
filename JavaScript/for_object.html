@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for~in : object</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // object 기억장소 = {key : value}
+        const person = {
+            fname : "John",
+            lname : "Doe",
+            age : 25
+        }
+        
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " "; // "John Doe 25"
+        }
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</body>
+</html>

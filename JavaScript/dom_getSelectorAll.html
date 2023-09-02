@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM access - getElementsByClassName</h1>
+
+    <p>자바</p>
+    <p class = "intro">스프링</p>
+    <p class = "intro">오라클</p>
+    <hr>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        // 배열(컬렉션) 형태로 참조
+        // const elements = document.getElementsByClassName('intro'); // 2개
+        // const elements = document.querySelectorAll('css선택자');
+        
+        const elements = document.querySelectorAll('p.intro');
+        // 위의 getElementsByClassName('intro'); 예제와 결과는 동일하다.
+
+        document.getElementById('demo').innerHTML = elements[1].innerHTML; // 스프링
+        document.getElementById('demo2').innerHTML = elements.length; // 2
+    </script>
+</body>
+</html>

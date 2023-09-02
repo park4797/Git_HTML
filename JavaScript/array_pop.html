@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        let fruits = ["사과","배","딸기","수박"];
+        document.getElementById("demo1").innerHTML = fruits;
+        let fruit = fruits.pop(); //마지막 요소 "수박" 제거. 윗줄에 사용하고 아랫줄에 적용됨
+        document.getElementById("demo2").innerHTML = fruits;
+        document.getElementById("demo3").innerHTML = "제거: " + fruit;
+    </script>
+</body>
+</html>

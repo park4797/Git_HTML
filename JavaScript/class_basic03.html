@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>훈련과정 : 자바, 스프링, 오라클</h1>
+
+    <!-- 기억장소 내용을 출력 -->
+    <p id="java"></p>
+    <p id="spring"></p>
+    <p id="oracle"></p>
+    <p id="react"></p>
+    <hr>
+    <!--p 값을 변경하여, 출력(영문으로)-->
+    <p id="java2"></p>
+    <p id="spring2"></p>
+    <p id="oracle2"></p>
+    <p id="react2"></p>
+
+    <script>
+        /*
+        클래스명 : Dev
+        변수(필드) : java, spring, oracle
+        데이터 한글로 출력 : 자바, 스프링, 오라클
+        */
+        class Dev {
+            constructor(java, spring, oracle, react) {
+                this.java = java;
+                this.spring = spring;
+                this.oracle = oracle;
+                this.react = react;
+            }
+        }
+        
+        const dev1 = new Dev("자바","스프링","오라클", "리액트")
+        
+
+        document.getElementById("java").innerHTML = dev1.java;
+        document.getElementById("spring").innerHTML = dev1.spring;
+        document.getElementById("oracle").innerHTML = dev1.oracle;
+        document.getElementById("react").innerHTML = dev1.react;
+
+        // 같은 기억장소에 접근, 수정
+        dev1.java = "java";
+        dev1.spring = "spring";
+        dev1.oracle = "oracle";
+        dev1.react = "react";
+
+        document.getElementById("java2").innerHTML = dev1.java;
+        document.getElementById("spring2").innerHTML = dev1.spring;
+        document.getElementById("oracle2").innerHTML = dev1.oracle;
+        document.getElementById("react2").innerHTML = dev1.react;
+
+
+    </script>
+</body>
+</html>

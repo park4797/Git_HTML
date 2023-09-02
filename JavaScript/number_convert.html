@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number convert (숫자변환)</title>
+
+    <script>
+        function plus () {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+
+            console.log(typeof num1);
+            console.log(typeof num2);
+
+            document.getElementById('result').value = parseInt(num1) + parseInt(num2);
+        }
+        // parseInt는 string을 number로 바꿔줌 (정수변환할때)
+        // 웹에서 숫자를 입력했을때 기본적으로 string으로 인식함
+    </script>
+</head>
+<body>
+    <h1>숫자 형변환</h1>
+    <input type="text" id="num1"> + <input type="text" id="num2"> =
+    <input type="text" id="result"> <br>
+    <button type="button" onclick="plus()";>더하기</button>
+</body>
+</html>

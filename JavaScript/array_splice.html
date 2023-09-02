@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>splice methods (index)</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits;
+
+        fruits.splice(2, 0, "Lemon", "Kiwi", "Pineapple");
+        // index로 2위치에서 0개를 제거하고, 배열을 삽입한다.
+        // fruits.splice(2, 2)로 할 시 indes 2위치에서 삽입하고, 뒤의 2개를 제거한다.
+        // splice는 삭제시켰던 값을 안에 저장하고 있다.
+        // splice는 fruits 배열에 영향을 줌.
+        document.getElementById("demo2").innerHTML = fruits;
+
+        fruits.splice(1, 2, "실험");
+        document.getElementById("demo3").innerHTML = fruits;
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수 호이스팅</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // 프로그래밍의 기본은 1.함수선언(정의, 생성) 2.함수호출(실행) 순서로 동작된다.
+        print();
+
+        // 실행시에 print() 함수를 자바스크립트 맨 위로 위치시켜 실행된다.
+        function print() {
+            document.getElementById("demo").innerHTML = "안녕하세요, 자바스크립트입니다.";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>번외로 해보기</h1>
+
+    <p id="표시"></p>
+
+    <script>
+        const 항목 = ["하나", "둘", "셋", "넷"];
+        let 뭐에넣을까 = "";
+
+        for (let 여기에넣기 of 항목) {
+            뭐에넣을까 += 여기에넣기 + "<br>";
+        }
+
+        document.getElementById("표시").innerHTML = 뭐에넣을까;
+        </script>
+</body>
+</html>

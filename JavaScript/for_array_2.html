@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for문과 배열(array)조합</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const course = ["HTML5/CSS3", "JavaScript", "Java", "Spring", "Oracle", "Node.js", "React"];
+        
+            // ;(semicolon)은 2개?만 들어간다 1, 2, 3 이기때문에?
+            for (let i=0, len=course.length, text = ""; i<len; i++) {
+                document.write(course[i] + "<br>");
+            }
+            // for문 안에서 정의를 내렸기 때문에 괄호 안에서만 사용가능
+            // 따라서 하나씩 뿌려줘야함 (6번들어가기 때문에 무거움)
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>add to array, use push</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <button onclick="추가()">추가2</button>
+
+    <button type="button" onclick="과일()">과일추가</button>
+
+    <script>
+        const fruits = ["사과", "배", "딸기"];
+        document.getElementById("demo1").innerHTML = fruits;
+        document.getElementById("demo2").innerHTML = fruits;
+
+        function 과일() {
+            fruits.push("앵두");
+            document.getElementById("demo1").innerHTML = fruits;
+        }
+        function 추가() {
+            fruits[fruits.length] = "복숭아";
+            document.getElementById("demo1").innerHTML = fruits;
+        }
+        // push는 맨뒤 부터 붙여줌
+    </script>
+</body>
+</html>

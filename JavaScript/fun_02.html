@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuction 2</title>
+</head>
+<body>
+    <h1>두 수를 뺴는 기능</h1>
+    <p id="min"></p>
+    <p id="min2"></p>
+    <p id="min3"></p>
+    <script>
+        let x, y, z;
+        x = 15;
+        y = 3;
+        z = x-y;
+        document.getElementById('min').innerHTML = z-y;
+
+        function minus(a,b) {
+            return a - b;
+        }
+        document.getElementById('min2').innerHTML = minus(180,20);
+        document.getElementById('min3').innerHTML = minus(80000, 20000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+<style>
+div.all {border: solid 1px;
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+</style>
+</head>
+<body>
+<div class="all">
+    <h4>기본정보</h4>
+    <div class="fixed">표시항목은 필수입력사항입니다.</div>
+    <form action="/action_page.php">
+        <label for="이름">이름</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="아이디">아이디
+        <input type="text"> <input type="button" value="아이디중복확인">
+
+        <p>6~16자까지 영문자(소문자), 숫자 사용 가능합니다.</p>
+
+        <label for="비밀번호">비밀번호</label>
+        <input type="password">
+        <p>6~16자까지 영문자(대소문자), 숫자 및 특수문자 사용 가능합니다.<br>
+        3자리 연속 또는 같은 문자, 아이디는 사용하실 수 없습니다.</p>
+
+        <label for="비밀번호 확인">비밀번호 확인</label>
+        <input type="text"><br>
+
+        <label for="생년월일 성별">생년월일/성별</label>
+        <input type="checkbox">남자<input type="checkbox">여자<br>
+
+        <label for="이메일">이메일</label>
+        <input type="text">@<input type="text">
+        <select>
+            <option value="naver.com">네이버</option>
+            <option value="google.com">구글</option>
+        </select><br>
+        <input type="text"> <input type="button" value="인증확인"><br>
+        
+        <label for="연락처">연락처</label>
+        <p>휴대전화</p>
+        <select>
+            <option value="010">선택</option>
+        </select>
+        <input type="tel"> <input type="tel">
+
+        <p>일반전화</p>
+        <select>
+            <option value="010">선택</option>
+        </select>
+        <input type="tel"> <input type="tel"> <br>
+        <span>연락처는 둘 중 하나만 입력해도 됩니다.</span><br>
+
+        <label for="우편번호">우편번호</label>
+        <input type="text"> <input type="button" value="주소검색"><br>
+
+        <label for="주소">주소</label>
+        <input type="text"><br>
+        <input type="text"><br>
+
+        <label for="정보수신 여부">정보수신 여부</label>
+        <input type="checkbox"> Email로 수신하겠습니다.
+        <input type="checkbox"> SMS로 수신하겠습니다.
+        </form>
+    </div>
+</body>
+</html>

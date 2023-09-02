@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const obj = {name : "dasdf", age : function () {return 30;}, city : "dong"};
+        obj.age = obj.age.toString(); // age : function() {return 30;}을 문자열로 변환
+
+        const myjson = JSON.stringify(obj);
+        // 문자열로 바꾼 후 변환
+        obj.age = eval("("+ obj.age +")");
+
+        let age = function() {return 30};
+
+        document.getElementById("demo").innerHTML = age();
+        console.log(myjson);
+    </script>
+</body>
+</html>

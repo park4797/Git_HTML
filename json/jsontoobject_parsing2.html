@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>날짜를 포함한 JSON 문자열을 object 객체로 변환</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const text = '{"name" : "홍길동", "birth" : "1986-12-14", "city" : "뉴욕"}';
+        const obj = JSON.parse(text);
+
+        console.log(obj.birth); // 문자열을 갖고 있다 (1986-12-14)
+
+        obj.birth = new Date(obj.birth); // Date 객체로 날짜 데이터를 갖게 된다.
+        // Sun Dec 14 1986 09:00:00 GMT+0900 (한국 표준시)
+
+        document.getElementById("demo").innerHTML = obj.name + " " + obj.birth;
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+        input[type="text"] {
+            width: 20%;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                // i : 인덱스, orgText : 이전내용
+                $("#test").text(function(i, orgText) {  
+                    return "이전 내용 : " + orgText + "변경 내용 : " + "fullstack <b>Java</b> web developer course. index : " + i;
+                });
+                // 태그를 지원해주지 않고, 입력한 값을 그대로 출력
+            });
+
+            $("#btn2").click(function() {
+                $("#test").html(function(i, orgText) {  
+                    return "이전 내용 : " + orgText + "변경 내용 : " + "fullstack <b>Java</b> web developer course. index : " + i;
+                });
+            });
+
+            $("#btn3").click(function() {
+                $("#u_name").val(function(i, value) {
+                    return "value에는 " + value +  " 변경할 이름은 " + "이강인"
+                }); // val("") 내용을 공백으로
+            });
+
+            $("#btn4").click(function() {
+                $("#url").text("다음")
+                $("#url").attr({
+                    "href" : "http://www.daum.net",
+                    "title" : "다음"
+                });
+
+                // $("#url").attr("id", "daum");
+                // 원래는 id는 read-only 형식이라 바꿀 수 없다.
+                // 지원되는 것이 있고, 안되는 것이 있다.
+                });
+            });
+    </script>
+</head>
+<body>
+    <h1>태그의 내용과 속성값 변경하기</h1>
+    <p id="test">풀스택 <b>자바</b>웹개발자 과정</p>
+
+    <input type="text" id="u_name" value="홍길동"><br>
+    <a id="url" href="http://www.url.com">네이버</a><br>
+    <button id="btn1">text 값 변경</button>
+    <button id="btn2">html 값 변경</button>
+    <button id="btn3">이름변경</button>
+    <button id="btn4">주소변경</button>
+</body>
+</html>

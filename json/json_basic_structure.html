@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // array는 같은 성질을 지닌것들을 나열한 것.
+        // json 기본구조
+        '{"name" : "홍길동"}' // string
+        '{"name" : 10}' // number
+        '{"name" : {"id" : "user01"}}' // object
+        '{"name" : true}' // boolean
+        '{"name" : [true, false, true]}' // boolean
+        '{"name" : null}' // null
+        '{"name" : ["별명1, 별명2, 별명3"]}' //array
+        '{"name" : [1, 2, 3]}' // array 2
+        '{"name" : ["대머리", 1, 3]}' //array?
+        '{"name" : [{"id" : "user01"}, {"id" : "user02"}, {"id" : "user03"}]}' // object를 포함
+        
+        // 다음 정보(데이터)는 문자열로 감싸주어야 한다.("")
+        /*
+        function : {"name" : "function(){}"}
+        date : {"name" : "2023-07-21"}
+        undefined : {"name" : "undefined"}
+
+        변수의 종류
+        
+        변수안에 데이터가 존재
+        ex) let count = 10;
+
+        변수안에 데이터가 존재하는 기억장소의 주소가 존재
+        ex) person = {name :"John", age:31, city :"New York"};
+        name이라는 장소에 John이 존재, age라는 장소에 31이 존재.
+        괄호안의 하나하나가 let count = 10; 개념이라고 보면된다.
+        person에는 괄호안에 들어있는 모든것들을 관리하고 있는 주소가 존재?
+        */
+    </script>
+</body>
+</html>

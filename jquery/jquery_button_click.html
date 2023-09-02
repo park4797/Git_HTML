@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1>버튼 클릭시 p태그 화면 숨기기</h1>
+
+    <p id="demo">JQuery를 학습중입니다.</p>
+    <p>JQuery를 학습중</p>
+
+    <!-- <button id="btn">클릭</button> -->
+    <button>클릭</button>
+
+    <script>
+        $(document).ready(function() {
+            $('button').click(function(){
+                $('p').hide();
+            });
+        });
+
+        // $('button').click(function() {~.  아래의 함수와 기능이 동일하다
+        // document.querySelector("button").click = function() {}
+
+    </script>
+
+</body>
+</html>

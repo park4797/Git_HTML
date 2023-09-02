@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <title>스프링</title>
+        <publisher>이젠</publisher>
+        <price>50000</price>
+        <etc>가격할인 &lt; 50000 </etc>
+    </book>
+        <book>
+        <title>자바</title>
+        <publisher>이젠</publisher>
+        <price>40000</price>
+        <etc>가격 할인 <![CDATA[<script>[document.write("Hello World");</script>]]></etc>
+
+    </book>
+</books>

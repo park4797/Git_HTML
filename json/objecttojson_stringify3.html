@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object 객체안에 function() 함수가 있을 시 json 문자열로 변환시 제거된다.</h1>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script> // 1) object 내에 function() 함수를 JSON 문자열로 그냥 변환시
+        const obj = {name : "John", age : function() {return 30;}, city : "New York"};
+
+        const myJSON = JSON.stringify(obj); // age : function() {return 30;} 변환시 제거됨
+
+        console.log(myJSON); // {"name":"John","city":"New York"}
+
+        document.getElementById("demo").innerHTML = myJSON; // {"name":"John","city":"New York"}
+    </script>
+
+    <script> // 2) object 내에 function() 함수를 문자열로 전환후 JSON 문자열로 변환시
+        const obj2 = {name : "Sally", age : function() {return 30;}, city : "Maxico"};
+
+        obj2.age = obj2.age.toString();
+        // age : function() {return 30;} -> age: "function() {return 30;}"
+        const myJSON2 = JSON.stringify(obj2)
+
+        console.log(myJSON2);
+        // {"name":"Sally","age":"function() {return 30;}","city":"Maxico"}
+
+        document.getElementById("demo2").innerHTML = myJSON2;
+        // {"name":"Sally","age":"function() {return 30;}","city":"Maxico"}
+    </script>
+</body>
+</html>

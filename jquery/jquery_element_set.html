@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("#test").text("fullstack <b>Java</b> web developer course");
+                // 태그를 지원해주지 않고, 입력한 값을 그대로 출력
+            });
+
+            $("#btn2").click(function() {
+                $("#test").html("fullstack <b>Java</b> web developer course");
+                // 입력한 태그를 지원해준다.
+            });
+
+            $("#btn3").click(function() {
+                $("#u_name").val("이강인"); // val("") 내용을 공백으로
+            });
+
+            $("#btn4").click(function() {
+                $("#naver").text("다음")
+                $("#naver").attr("href", "www.daum.net");
+
+                $("#naver").attr("id", "daum");
+                // 원래는 id는 read-only 형식이라 바꿀 수 없다.
+                // 지원되는 것이 있고, 안되는 것이 있다.
+                });
+            });
+    </script>
+</head>
+<body>
+    <h1>태그의 내용과 속성값 변경하기</h1>
+    <p id="test">풀스택 <b>자바</b>웹개발자 과정</p>
+
+    <input type="text" id="u_name" value="홍길동"><br>
+    <a id="naver" href="http://www.naver.com">네이버</a><br>
+    <button id="btn1">text 값 변경</button>
+    <button id="btn2">html 값 변경</button>
+    <button id="btn3">이름변경</button>
+    <button id="btn4">주소변경</button>
+</body>
+</html>

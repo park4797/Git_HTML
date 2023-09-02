@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const arr = ["John", "Peter", "Sally", "Jane"];
+        const myJSON = JSON.stringify(arr); // 문자열 '["John", "Peter", "Sally", "Jane"]'
+
+        document.getElementById("demo").innerHTML = myJSON;
+        // 보여지는 결과값에는 '' 가 붙어있지 않다.(하지만 붙어있는 걸로 변환된다.)
+    </script>
+</body>
+</html>

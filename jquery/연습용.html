@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        // 이벤트 메서드명을 직접사용
+        $("button").click(function (){
+            $("p").hide();
+        });
+
+        // on 메서드명으로 이벤트 사용.
+        $("input[type='button']").on("click", function() {
+            $("p").hide();
+        });
+
+        // on 메서드명의 다른 사용법
+        /*
+        $("부모태그선택자(정적)").on("click", "자식태그 선택자(동적)", function() {
+            $("p").hide();
+        });
+        */
+    });
+
+    </script>
+
+</head>
+<body>
+    <p>JQuery를 학습중입니다.</p>
+    <button>클릭1</button>
+    <input type="button" value="클릭2">
+</body>
+</html>

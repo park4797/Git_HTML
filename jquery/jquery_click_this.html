@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p").click(function() {
+                // 클릭한 p태그를 가리킴. 상대적인 의미
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>$(this)의 의미를 학습하자.</h1>
+    <p>자바</p>
+    <p>스프링</p>
+    <p>오라클</p>
+</body>
+</html>

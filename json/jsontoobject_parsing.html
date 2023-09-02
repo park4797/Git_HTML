@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON 문자열 데이터를 object 객체로 파싱하기</h1>
+    <p>문법 검사 및 해석을 parsing이라고 한다.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // 안의 name이 "" 로 감싸있기 때문에 '' 로 시작
+        // 단순값이면 "" 문자열 or 그냥 숫자열로 표현하고 여러명일시 아래의 구조로 한다.
+        // 서버로부터 데이터를 받아온다.(데이터가 이렇게 보내진다?)
+        let txt =
+        '{"employees" : [{"firstName" : "홍", "lastName" : "길동"},' +
+        '{"firstName" : "손", "lastName" : "흥민"},' +
+        '{"firstName" : "이", "lastName" : "강인"}]}';
+
+        /*
+        JavaScript obJect // obj 객체안에 다음과 같이 내용이 참조된다.
+        Key 부분만 큰 따옴표가 제거된 모습
+        const obj = 
+        {employees : [{"firstName" : "홍", "lastName" : "길동"},
+        {firstName : "손", "lastName" : "흥민"},
+        {"firstName : "이", "lastName" : "강인"}]};
+        */
+
+        const obj = JSON.parse(txt); // 문법 검사 및 해석을 하여 JavaScript object으로 변환해 준다.
+        // JSON 형태의 문자열을 object로 변환
+
+        console.log(obj.employees[0]); // 배열 데이터를 참조함
+        console.log(obj.employees[1]); 
+        console.log(obj.employees[2]); 
+
+        document.getElementById("demo").innerHTML =
+        obj.employees[0].firstName + " " + obj.employees[0].lastName;
+
+        /*
+        값
+        string "홍길동"
+        number 10
+        object {"" : ""}
+        array
+            number [10,20,30]
+            string ["손흥민","박지성"]
+            boolean [true, false, false]
+            object [{"idx" : 1}, {"title" : "제목"}, {"content" : "본문"}]
+            
+        boolean true
+        null    null
+        */
+    </script>
+</body>
+</html>

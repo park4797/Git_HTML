@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>날짜를 포함한 JSON 문자열을 object 객체로 변환</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const text = '{"name" : "홍길동", "birth" : "1986-12-14", "city" : "뉴욕"}';
+        // 1) JSON 형태의 날짜로 되어있는 문자열을 object 객체의 문자열로 변환
+        // const obj = JSON.parse(text);
+
+        // 2) JSON 형태의 날짜로 되어있는 문자열을 object 객체로 변환시 
+        // new Date() 날짜형 데이터도 변환 한다.
+
+        // JSON.parse가 text를 변환시키고 값부분 들이 익명함수의 키와 값으로 들어가게 된다.
+        const obj = JSON.parse(text, function(key, value){
+            if (key == "birth") {
+                return new Date(value);
+            }else {
+                return value;
+            }
+        });
+        console.log(obj.birth); // 문자열을 갖고 있다 (1986-12-14)
+
+        /*
+        아래 구문이 필요가 없다. 위에서 new Date() 작업을 하여, object로 변환함
+        obj.birth = new Date(obj.birth); // Date 객체로 날짜 데이터를 갖게 된다.
+        // Sun Dec 14 1986 09:00:00 GMT+0900 (한국 표준시)
+        */
+
+        document.getElementById("demo").innerHTML = obj.name + " " + obj.birth;
+    </script>
+</body>
+</html>

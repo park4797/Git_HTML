@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수 정의 및 사용</h1>
+
+    <script>
+        // 함수의 유형; return 값 유무 2가지, 매개변수 유무 2가지
+
+        // 1) return 및 매개변수 사용이 없는 형태(매개변수도 없다.)
+        function funA() {
+            document.write("홍길동님 안녕하세요");
+        }
+
+        function move() {
+            location.href = "http://www.naver.com";
+        }
+
+        // 2) return 은 없고, 매개변수는 있는 형태
+        function funB(name) {
+            document.write(name + "안녕하세요");
+        }
+
+        function add(num1, num2) {
+            document.write("두 수의 합은? " + (num1 + num2));
+        }
+        /*
+        function move2(moveUrl) {
+            location.href = moveUrl;
+        }
+        move2("http://www.naver.com");
+        move2("http://www.gmail.com");
+        */
+        // 3) return 은 있고, 매개변수는 없는 형태
+        function funC() {
+            // code;
+            return 값;
+        }
+
+        // 4) return 과 매개변수가 모두 있는 형태
+        let tot = sum(100, 98 , 88)
+
+        function sum(kor, eng ,mat){
+            return kor + eng + mat;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object 데이터타입에 대한 이해. 용도</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        // 자동차에 대한 정보를 저장
+        /*
+        1) 각각의 변수 사용 (서로 직접적으로 연관이 없는 것들은 변수를 지정해서 사용)
+        let type = "Fiat"
+        let model = "500"
+        let color = "white"
+        */
+
+        // const mycar = ["Fiat", "500, "white];
+        mycar[2];
+
+        // 2) object 데이터타입을 정보를 저장(서로 연관되어 있는 것들을 묶고자 할때)
+        // 1회성 사용에 용이(배열(array)의 차이점 구분)
+        const car = {
+            type : "Fiat",
+            model : "500",
+            color : "white",
+            fullinfo : function() {
+                return this.type + " " + this.model;
+            }
+        };
+
+        const car2 = {
+            type : "K5",
+            model : "100",
+            color : "",
+            fullinfo : function() {
+                return this.type + " " + this.model;
+            }
+        };
+
+        document.getElementById("demo").innerHTML = car.fullinfo();
+        
+        // class : 기억장소 설계도. 즉 사용자정의 데이터타입.
+        // 클래스 : 붕어빵기계, 기억장소(변수) : 붕어빵
+        class Car {
+            constructor (kind, model, color) {
+                // this.이름 : 내부기억장소 선언
+                this.kind = kind;
+                this.model = model;
+                this.color = color;
+            }
+            // 메서드 정의
+            fullinfo() {
+                return this.type + " " + this.model;
+            }
+        }
+        // 클래스 사용은 기억장소를 생성하는 의미가 된다.
+        const myCar1 = new Car("Ford", "100", "검정"); // class 사용시 new가 붙어야 한다.
+        // Ford, 100, 검정이라는 기억장소가 각각 생긴다.
+        const myCar2 = new Car("Audi", "400", "흰색");
+
+        // 클래스로 생성된 객체의 형태는 object 의 구조를 갖고 있다.
+        /*
+        console.log("myCar1", myCar1);
+        console.log("마이카", myCar2);
+        */
+        // 객체가 관리하는 기억장소 사용
+        myCar1.type = "Grandeur";
+        console.log("myCar1.type", myCar1.type);
+        console.log(myCar1.fullinfo());
+
+        /*
+        class Date {
+
+        } 아래 코드의 모습?
+        */ 
+        const d = new Date();
+        d.getFullYear();
+
+
+    </script>
+</body>
+</html>

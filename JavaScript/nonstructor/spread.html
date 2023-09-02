@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>spread 문법</h1>
+
+    <script>
+        /*
+        const slime = {
+            name : '슬라임'
+        };
+
+        const cuteSlime = {
+            name : '슬라임',
+            attribute : 'cute'
+        };
+
+        const purpleCuteSlime = {
+            name : '슬라임',
+            attribute : 'cute',
+            color : 'purple'
+        };
+        */
+        // 기존 객체를 건드리지 않고, 새로운 객체로 만드는 의미
+
+        const slime = {
+            name : '슬라임'
+        };
+
+        const cuteSlime = {
+            ...slime, // slime 객체 복제
+            attribute : 'cute'
+        };
+
+        const purpleCuteSlime = {
+            ...cuteSlime,
+            color : 'purple'
+        };
+
+        const purpleCuteSlimeAdd = {
+            ...purpleCuteSlime,
+            add : 'form'
+        };
+
+        const a = [1, 2, 3, 4, 5];
+        const b = [...a]; // [1, 2, 3, 4, 5]
+
+        console.log(a == b); // false. 주소비교
+
+        const x = 10;
+        const y = 10;
+
+        console.log(x == y); // true. 값(데이터)비교
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>논리 연산자. && || !</h1>
+
+    <script>
+        // 논리연산자 (&&, ||)가 조건식에 사용될 때 갖고 있는 문법적인 특징
+        let x = 10;
+        let y = 20;
+
+        function funA() {
+            console.log(x);
+            return x < 0; // return x > 0;
+        }
+
+        function funB() {
+            console.log(y);
+            return y > 10;
+        }
+
+        // x < 0 false이면, y > 10 코드가 동작되지 않는다.
+        // if문이 true가 될 수 없으므로 영향을 주지 않기 때문에 동작되지 않도록 설계됨
+        if (funA() && funB()) {
+            console.log("test");
+        }
+
+        // x > 0 true이면, y > 10 코드가 true 또는 false일지라도
+        // if문이 true가 되는데 영향을 주지 않기 때문에 동작되지 않도록 설계됨
+        if(funA() || funB()) {
+            console.log("test2")
+        }
+    </script>
+</body>
+</html>

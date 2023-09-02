@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>두 수를 이용한 사칙연산과 나머지 구하기</h1>
+
+    <input type="text" id="num1"><br>
+    <input type="text" id="num2"><br>
+    <input type="button" value="+" onclick="info('+')">
+    <input type="button" value="-" onclick="info('-')">
+    <input type="button" value="*" onclick="info('*')">
+    <input type="button" value="/" onclick="info('/')">
+    <input type="button" value="%" onclick="info('%')">
+    <p id="result"></p>
+
+    <script>
+        function info(op){
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            switch(op) {
+                case '+' : 
+                    add(num1, num2)
+                    break;
+                case '-' : 
+                    sub(num1, num2)
+                    break;
+                case '*' : 
+                    mul(num1, num2)
+                    break;
+                case '/' : 
+                    div(num1, num2)
+                    break;
+                case '%' : 
+                    mod(num1, num2)
+                    break;
+            }
+        }
+
+        function display(result) {
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function add(num1, num2) {
+            display(num1 + num2);
+        }
+
+        function sub(num1, num2) {
+            display(num1 - num2);
+        }
+
+        function mul(num1, num2) {
+            display(num1 * num2);
+        }
+
+        function div(num1, num2) {
+            display(num1 / num2);
+        }
+
+        function mod(num1, num2) {
+            display(num1 % num2);
+        }
+        /*
+        function add() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            document.getElementById("result").innerHTML = num1 + num2;
+        }
+
+        function sub() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            document.getElementById("result").innerHTML = num1 - num2;
+        }
+
+        function mul() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function div() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            document.getElementById("result").innerHTML = num / num2; 
+        }
+
+        function mod() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            document.getElementById("result").innerHTML = num1 % num2;
+        }
+        */
+    </script>
+</body>
+</html>

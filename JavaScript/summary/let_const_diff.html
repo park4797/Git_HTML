@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>let vs const 비교</h1>
+    <script>
+        // let 으로 선언한 변수는 추후 초기값을 변경할 수 있다.
+        let x = 10;
+        x = 20;
+
+        // const 는 상수 선언으로 초기값을 변경할 수 없다.
+        // 상수는 선언을 할 때 값을 같이 표현해 주어야 한다.
+        const y = 10;
+        // y = 20;
+
+        const arr = [10, 20, 30, 40]; // [] 안의 데이터가 arr에 주소로 저장된다.
+        arr[0] = 100; // arr 자체가 아닌 저장된 곳의 데이터만 변경됨
+
+        /*
+        기억장소는 2가지 구분이 있다.
+        - 기억장소는 데이터를 직접 저장하여 관리.
+        - 기억장소의 데이터가 저장되어 있는 위치(주소)를 저장하여 관리
+        */
+    </script>
+</body>
+</html>

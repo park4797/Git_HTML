@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>두 수를 이용한 사칙연산과 나머지 구하기</h1>
+
+    <input type="text" id="num1"><br>
+    <input type="text" id="num2"><br>
+    <input type="button" value="+" onclick="calc('+')">
+    <input type="button" value="-" onclick="calc('-')">
+    <input type="button" value="*" onclick="calc('*')">
+    <input type="button" value="/" onclick="calc('/')">
+    <input type="button" value="%" onclick="calc('%')">
+    <p id="result"></p>
+
+    <script>
+
+        function calc(op) {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let result;
+
+            switch(op) {
+                case "+" : 
+                    result = num1 + num2;
+                    break;
+                case "-" : 
+                    result = num1 - num2;
+                    break;
+                case "*" : 
+                    result = num1 * num2;
+                    break;
+                case "/" : 
+                    result = num1 / num2;
+                    break;
+                case "%" : 
+                    result = num1 % num2;
+                    break;
+            }
+            document.getElementById("result").innerHTML = result; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>모듈 사용하기</h1>
+
+    <p id="demo"></p>
+
+    <script type="module">
+        import {name, age} from "./person.js"; // . 은 같은 폴더내?를 가리킴
+        // import {name, age} 를 가져오겠다. js 파일로 부터
+
+        let txt = `이름은 ${name}, 나이는 ${age} 입니다.`;
+
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</body>
+</html>
